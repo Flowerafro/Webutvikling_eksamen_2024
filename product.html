@@ -12,6 +12,8 @@
     <title>Nettbutikk - produktside</title>
 </head>
 
+<!-- DIV COUNT: 1 -->
+
 <body>
 
     <div class="grid-container">
@@ -39,8 +41,98 @@
         </header>
 
         <main>
+            <section id="product-section">
+                <h1>Produktside</h1>
 
+                <ul class="bread-crumbs">
+                    <li><a href="index.html">Hjem ></a></li>
+                    <li><a href="#">Kategori > </a></li>
+                    <li><a href="product.html">Produktnavn</a></li>
+                </ul>
 
+                <!-- 4 bilder -->
+                <div class="product-images">
+                    <picture class="product-image">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/200/200">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/300/300">
+                        <img src="https://picsum.photos/400/400" alt="populært produkt nr.1">
+                    </picture>
+                    <picture class="product-image">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/200/200">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/300/300">
+                        <img src="https://picsum.photos/400/400" alt="populært produkt nr.1">
+                    </picture>
+                    <picture class="product-image">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/200/200">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/300/300">
+                        <img src="https://picsum.photos/400/400" alt="populært produkt nr.1">
+                    </picture>
+                    <picture class="product-image">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/200/200">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/300/300">
+                        <img src="https://picsum.photos/400/400" alt="populært produkt nr.1">
+                    </picture>
+                </div>
+
+                <article class="product-info">
+                    <h2>Produktnavn</h2>
+                    <a href="#">MERKENAVN</a>
+                    <p>1000kr inkl. mva</p>
+                    <p>FARGE: <span>Beige</span></p>
+                </article>
+            </section>
+
+            <!-- minimum 4 produktkort tilsvarende de som brukes på forsiden under seksjonen "de mest populære" -->
+            <section id="similar-product">
+                <h2>Lignende produkter</h2>
+                <article class="product-card">
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                        <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                    </picture>
+                    <article class="product-card-info">
+                        <h3>Produktnavn</h3>
+                        <p>1999 kr</p>
+                    </article>
+                </article>
+
+                <article class="product-card">
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                        <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                    </picture>
+                    <article class="product-card-info">
+                        <h3>Produktnavn</h3>
+                        <p>1999 kr</p>
+                    </article>
+                </article>
+
+                <article class="product-card">
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                        <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                    </picture>
+                    <article class="product-card-info">
+                        <h3>Produktnavn</h3>
+                        <p>1999 kr</p>
+                    </article>
+                </article>
+
+                <article class="product-card">
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                        <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                        <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                    </picture>
+                    <article class="product-card-info">
+                        <h3>Produktnavn</h3>
+                        <p>1999 kr</p>
+                    </article>
+                </article>
+            </section>
         </main>
 
         <footer>
