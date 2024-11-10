@@ -4,6 +4,7 @@
 
 :root {
     --white: #fff;
+    --light-grey: #D3D3D3;
     --dark-grey: #333;
     --black: #000;
 }
@@ -119,12 +120,57 @@ footer section {
 /************ FORSIDE index.html*********/
 /****************************************/
 
+#banner {
+    background-color: var(--light-grey);
+    padding: 3rem 4rem;
+    margin: 2rem 1rem;
+    text-align: right;
+}
+
+#banner h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#banner p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#banner a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 600;
+    background-color: var(--white);
+    padding: 1rem;
+    cursor: pointer;
+} 
+
+/* Produktkort */
+
+#pop-products {
+    width: 100%;
+    padding: 1rem;
+}
+
+#pop-products h2 {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+.pop-btn {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 2rem 0.5rem;
+}
+
 .product-card {
-    max-width: 350px;
+    max-width: 400px;
     min-width: 200px;
     width: 100%;
-    box-shadow: 13px 9px 20px 0px #efefef;
-    padding: 1rem; 
 }
 
 .product-card img {
@@ -132,14 +178,57 @@ footer section {
     height: auto;
 }
 
-.product-card-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.product-card p {
+    margin: 1rem 0;
 }
 
-.product-card-info h3 {
-    font-size: 1.5rem;
+
+/* Kategoritkort */
+
+#pop-category {
+    width: 100%;
+    padding: 1rem;
+}
+
+#pop-category h2 {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+.category-card {
+    width: min(96%, 400px);
+    height: 300px;
+    border: 1px solid var(--black);
+    margin: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Anmeldelser */
+
+#reviews {
+    width: 100%;
+    padding: 1rem;
+}
+
+.review-card {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h5 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 /****************************************/
@@ -203,6 +292,16 @@ footer section {
     gap: 1rem;
 }
 
+.product-card-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.product-card-info h3 {
+    font-size: 1.5rem;
+}
+
 #similar-product {
     padding: 1rem;
 }
@@ -213,9 +312,9 @@ footer section {
 }
 
 
-/****************************************/
+/*****************************************/
 /********* Kasseside checkout.html********/
-/****************************************/
+/*****************************************/
 
 #checkout {
     width: 100%;
@@ -243,7 +342,6 @@ footer section {
 #delivery,
 #payment, .checkout-title {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
 }
 
 .checkout-title {
