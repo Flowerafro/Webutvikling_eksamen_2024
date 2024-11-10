@@ -1,4 +1,114 @@
+/* GLOBAL RULES */
+:root {
+    --white: #fff;
+    --black: #000;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+/* GLOBAL header */
+header {
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+form {
+    position: relative;
+}
+
+form label {
+    visibility: hidden;
+    position: absolute;
+}
+
+form input, button {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+nav ul li {
+   margin: 1rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+
+/* GLOBAL footer */
+
+footer {
+    border-top: 1px solid var(--black);
+    padding: 1rem;
+
+}
+
+footer section {
+    margin: 1rem 0;
+}
+
+#footer-sec-1 {
+}
+
+#contact-index ul {
+    list-style: none;
+}
+
+#contact-index ul li{;
+    padding: 0.5rem;
+}
+
+#contact-index ul li i {
+    margin-right: 0.5rem;
+}
+
+#shortcuts ul {
+    list-style: none;
+}
+
+#shortcuts ul li a{;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#social-media ul {
+    list-style: none;
+}
+
+#social-media ul li a{;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+#social-media ul li a i {
+    margin: 0.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+/* FORSIDE index.html*/
 
 .product-card {
     max-width: 350px;
