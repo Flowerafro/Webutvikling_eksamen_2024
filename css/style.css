@@ -4,6 +4,7 @@
 
 :root {
     --white: #fff;
+    --dark-grey: #333;
     --black: #000;
 }
 
@@ -31,16 +32,22 @@ header {
     padding: 1rem;
 }
 
-form {
+#header-form {
     position: relative;
 }
 
-form label {
+#header-form label {
     visibility: hidden;
     position: absolute;
 }
 
-form input, button {
+#header-form input {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+}
+
+#search-btn {
     border: 1px solid var(--black);
     background-color: var(--white);
     padding: 0.5rem 1rem;
@@ -77,9 +84,6 @@ footer section {
     margin: 2rem 0;
 }
 
-footer section h3 {
-    text-transform: uppercase;
-}
 
 #contact-index ul,
 #shortcuts ul,
@@ -142,7 +146,7 @@ footer section h3 {
 /*********** Produkt product.html********/
 /****************************************/
 
-h1 {
+#product-section h1 {
     visibility: hidden;
 }
 
@@ -167,8 +171,6 @@ h1 {
 .bread-crumbs li:nth-child(3) {
     font-weight: bold;
 }
-
-
 
 #product-section, 
 #similar-product {
@@ -214,3 +216,150 @@ h1 {
 /****************************************/
 /********* Kasseside checkout.html********/
 /****************************************/
+
+#checkout {
+    width: 100%;
+    padding: 1rem;
+}
+
+#checkout h1 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+#shopping-bag, 
+#information,
+#delivery,
+#payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+#shopping-bag, 
+#information,
+#delivery,
+#payment, .checkout-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.checkout-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+/* 1. Shopping bagen din */
+
+.shoppingbag-item {
+    max-width: 400px;
+    min-width: 200px;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.shoppingbag-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shoppingbag-item h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.shoppingbag-item p {
+    font-size: 1rem;
+}
+
+/* 2. Dine opplysninger */
+
+#form-information {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#form-information p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#form-information label {
+    visibility: hidden;
+    position: absolute;
+}
+
+#form-information input {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 2px 0;
+}
+
+.form-info-btn {
+   background-color: var(--dark-grey);
+   color: var(--white);
+   width: fit-content;
+   padding: 1rem;
+   margin: 2rem 0;
+}
+
+#form-info-abort {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+
+/* 3. Levering */
+#form-delivery h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#form-delivery label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 4. Betaling */
+
+#form-payment {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-payment h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#form-payment input {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 2px 0;
+}
+
+#form-payment label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.checkboxes p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.checkboxes label {
+    font-size: 1rem;
+    font-weight: 600;
+}
