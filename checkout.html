@@ -12,166 +12,194 @@
     <title>Nettbutikk - kasseside</title>
 </head>
 
-<!-- DIV COUNT: 2 -->
+<!-- DIV COUNT: 4 -->
 
-<body>
+<body class="grid-container">
 
-    <div class="grid-container">
+    <header>
+        <nav>
+            <form id="header-form">
+                <label for="search">Søk</label>
+                <input type="search" placeholder="Søk her" id="search">
+                <button type="submit" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#pop-products">Produkter</a></li>
+                <li><a href="index.html">LOGO</a></li>
+                <li><a href="index.html#pop-category">Kategorier</a></li>
+                <li><a href="index.html#contact-index">Kontakt oss</a></li>
 
-        <header>
-            <nav>
-                <form id="header-form">
-                    <label for="search">Søk</label>
-                    <input type="search" placeholder="Søk her" id="search">
-                    <button type="submit" id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#pop-products">Produkter</a></li>
-                    <li><a href="index.html">LOGO</a></li>
-                    <li><a href="index.html#pop-category">Kategorier</a></li>
-                    <li><a href="index.html#contact-index">Kontakt oss</a></li>
+            </ul>
+            <ul>
+                <li><i class="fa-regular fa-user"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Kasse</h1>
+    <main id="checkout">
+        <section id="shopping-bag">
+            <h2 class="checkout-title">1. Shoppingbagen din</h2>
+            <article class="shoppingbag-item">
+                <picture>
+                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                </picture>
+                <article class="shoppingbag-info">
+                    <h3>Product name</h3>
+                    <p>1999 kr</p>
+                    <p>Farge: Beige</p>
+                </article>
+            </article>
 
-                </ul>
-                <ul>
-                    <li><i class="fa-regular fa-user"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </nav>
-        </header>
+            <article class="shoppingbag-item">
+                <picture>
+                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                </picture>
+                <article class="shoppingbag-info">
+                    <h3>Product name</h3>
+                    <p>1999 kr</p>
+                    <p>Farge: Beige</p>
+                </article>
+            </article>
 
-        <main>
+            <article class="shoppingbag-item">
+                <picture>
+                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                </picture>
+                <article class="shoppingbag-info">
+                    <h3>Product name</h3>
+                    <p>1999 kr</p>
+                    <p>Farge: Beige</p>
+                </article>
+            </article>
 
-            <section id="checkout">
-                <h1>Kasse</h1>
+            <article class="shoppingbag-item">
+                <picture>
+                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                </picture>
+                <article class="shoppingbag-info">
+                    <h3>Product name</h3>
+                    <p>1999 kr</p>
+                    <p>Farge: Beige</p>
+                </article>
+            </article>
+        </section>
 
-                <section id="shopping-bag">
-                    <h2 class="checkout-title">1. Shoppingbagen din</h2>
-                    <article class="shoppingbag-item">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Product name</h3>
-                        <p>1999 kr</p>
-                        <p>Farge: Beige</p>
-                    </article>
+        <section id="information">
+            <h2 class="checkout-title">2. Dine opplysninger</h2>
 
-                    <article class="shoppingbag-item">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.2">
-                        </picture>
-                        <h3>Product name</h3>
-                        <p>1999 kr</p>
-                        <p>Farge: Beige</p>
-                    </article>
-
-                    <article class="shoppingbag-item">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.3">
-                        </picture>
-                        <h3>Product name</h3>
-                        <p>1999 kr</p>
-                        <p>Farge: Beige</p>
-                    </article>
-
-                </section>
-
-                <section id="information">
-                    <h2 class="checkout-title">2. Dine opplysninger</h2>
-                    <form id="form-information">
-                        <p>Leveringsadresse</p>
+            <form id="form-information">
+                <p>Leveringsadresse</p>
+                <section class="form-rows">
+                    <div class="form-row">
                         <label for="fname">Fornavn*</label>
                         <input type="text" id="fname" name="firstname" placeholder="Fornavn">
+                    </div>
 
+                    <div class="form-row">
                         <label for="lname">Etternavn*</label>
                         <input type="text" id="lname" name="lastname" placeholder="Etternavn">
-
-                        <label for="gateadresse">Gateadresse*</label>
-                        <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse">
-
-                        <label for="postnummer">Postnummer*</label>
-                        <input type="number" id="postnummer" name="postnummer" min="0" max="9999"
-                            placeholder="Postnummer">
-
-                        <label for="poststed">Poststed*</label>
-                        <input type="text" id="poststed" name="poststed" placeholder="Poststed">
-                    </form>
-                    <button type="submit" class="form-info-btn">Lagre</button>
-                    <a href="#" id="form-info-abort">Avbryt</a>
-                </section>
-
-                <section id="delivery">
-                    <h2 class="checkout-title">3. Levering</h2>
-                    <form id="form-delivery">
-                        <h3>Leveringsvalg</h3>
-                        <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
-                        <label for="ekspress-hjem">Ekspress hjemlevering</label><br>
-
-                        <input type="radio" id="ekspress-utleveringssted" name="levering"
-                            value="Ekspress pakke til utleveringssted">
-                        <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label><br>
-
-                        <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
-                        <label for="standard-hjemlevering">Standard hjemlevering</label><br><br>
-                    </form>
-
-                </section>
-
-                <section id="payment">
-                    <h2 class="checkout-title">4. Betaling</h2>
-
-                    <form id="form-payment">
-                        <h3>Betal med kort</h3>
-                        <label for="kortnummer">Kortnummer</label>
-                        <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
-                            placeholder="****-****-****-4444">
-
-                        <label for="utlopsdato">Utløpsdatp</label>
-                        <input type="date" id="utlopsdato" name="utlopsdato">
-
-                        <label for="cvv">CVC/CVV</label>
-                        <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV">
-                    </form>
-
-                    <div class="checkboxes">
-                        <p>å betalen inkl. mva</p>
-                        <p>1999 kr</p>
-                        <button type="submit" class="form-info-btn">Fullfør kjøp</button>
-                        <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og
-                            fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet
-                            dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-
-                        <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev"
-                            value="Ja takk! Send nyhetsbrev til meg.">
-                        <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label><br>
-
-                        <input type="checkbox" id="tilbud" name="tilbud"
-                            value="Jeg ønsker å motta tekstmeldinger med tilbud og nyheter">
-                        <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label><br>
                     </div>
                 </section>
 
+                <label for="gateadresse">Gateadresse*</label>
+                <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse">
+
+                <section class="form-rows">
+                    <div class="form-row">
+                        <label for="postnummer">Postnummer*</label>
+                        <input type="number" id="postnummer" name="postnummer" min="0" max="9999"
+                            placeholder="Postnummer">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="poststed">Poststed*</label>
+                        <input type="text" id="poststed" name="poststed" placeholder="Poststed">
+                    </div>
+                </section>
+                <button type="submit" class="form-info-btn">Lagre</button>
+                <a href="#" id="form-info-abort">Avbryt</a>
+            </form>
+        </section>
+
+        <section id="delivery">
+            <h2 class="checkout-title">3. Levering</h2>
+            <form id="form-delivery">
+                <h3>Leveringsvalg</h3>
+
+                <span class="delivery-option">
+                    <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
+                    <label for="ekspress-hjem">Ekspress hjemlevering</label>
+                </span>
+                <br>
+
+                <span class="delivery-option">
+                    <input type="radio" id="ekspress-utleveringssted" name="levering"
+                        value="Ekspress pakke til utleveringssted">
+                    <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
+                </span>
+                <br>
+
+                <span class="delivery-option">
+                    <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
+                    <label for="standard-hjemlevering">Standard hjemlevering</label></span>
+                <br><br>
+            </form>
+        </section>
+
+        <section id="payment">
+            <h2 class="checkout-title">4. Betaling</h2>
+
+            <form id="form-payment">
+                <h3>Betal med kort</h3>
+                <label for="kortnummer">Kortnummer</label>
+                <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
+                    placeholder="****-****-****-4444">
+                <label for="utlopsdato">Utløpsdatp</label>
+                <input type="date" id="utlopsdato" name="utlopsdato">
+                <label for="cvv">CVC/CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV">
+            </form>
+
+            <section class="checkboxes">
+                <p>Å betale inkl. mva</p>
+                <p>1999 kr</p>
+                <button type="submit" class="form-info-btn">Fullfør kjøp</button>
+                <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og
+                    fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet
+                    dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+
+                <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev" value="Ja takk! Send nyhetsbrev til meg.">
+                <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label><br>
+
+                <input type="checkbox" id="tilbud" name="tilbud"
+                    value="Jeg ønsker å motta tekstmeldinger med tilbud og nyheter">
+                <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label><br>
             </section>
+        </section>
+    </main>
 
-        </main>
+    <footer>
+        <section id="footer-sec-1">
+            <a href="index.html">
+                <h3>LOGO</h3>
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
+        </section>
 
-        <footer>
-            <section id="footer-sec-1">
-                <a href="index.html">
-                    <h3>LOGO</h3>
-                </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
-            </section>
-
+        <section id="footer-sec-2">
             <section id="contact-index">
                 <h3>KONTAKT</h3>
                 <ul>
@@ -200,9 +228,8 @@
                     <li><a href="index.html"><i class="fab fa-pinterest"></i></a></li>
                 </ul>
             </section>
-        </footer>
-
-    </div>
+        </section>
+    </footer>
 
 </body>
 

@@ -92,10 +92,15 @@ nav ul li a {
 footer {
     border-top: 1px solid var(--black);
     margin: 1rem;
+    width: 100%;
 }
 
 footer section {
     margin: 2rem 0;
+}
+
+footer h3 {
+    text-transform: uppercase;
 }
 
 footer #footer-sec-1 a {
@@ -410,18 +415,17 @@ footer #footer-sec-1 a {
 .checkout-title {
     font-size: 2rem;
     text-transform: uppercase;
+    width: 100%;
 }
 /* 1. Shopping bagen din */
 
 .shoppingbag-item {
-    max-width: 400px;
-    min-width: 200px;
     width: 100%;
     padding: 1rem 0;
 }
 
 .shoppingbag-item img {
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
@@ -460,6 +464,7 @@ footer #footer-sec-1 a {
     background-color: var(--white);
     padding: 1rem;
     margin: 2px 0;
+    width: 100%;
 }
 
 .form-info-btn {
@@ -468,6 +473,7 @@ footer #footer-sec-1 a {
    width: fit-content;
    padding: 1rem;
    margin: 2rem 0;
+   border: none;
 }
 
 #form-info-abort {
@@ -477,6 +483,7 @@ footer #footer-sec-1 a {
 
 
 /* 3. Levering */
+
 #form-delivery h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -512,6 +519,10 @@ footer #footer-sec-1 a {
     font-size: 1rem;
     font-weight: bold;
     text-transform: capitalize;
+}
+
+.checkboxes {
+    text-align: left;
 }
 
 .checkboxes p {
@@ -566,11 +577,20 @@ footer #footer-sec-1 a {
     #footer-sec-1 {
         width: 100%;
         grid-column: 1 / 4;
-        grid-row: 1 / 2;
+        grid-row: 1;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #footer-sec-2 {
+        width: 100%;
+        grid-column: 1 / 4;
+        grid-row: 2;
+
+        display: flex;
+        justify-content: space-between;
     }
 
     #contact-index, 
@@ -588,7 +608,7 @@ footer #footer-sec-1 a {
 
      /********** Forside ***************/
 
-    #product-cards {
+    #product-cards, .similar-products {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -668,6 +688,7 @@ footer #footer-sec-1 a {
      .products {
         display: flex;
         flex-direction: row;
+        padding: 1rem;
      }
 
      .product-images {
@@ -713,4 +734,117 @@ footer #footer-sec-1 a {
         margin-left: 10rem;
      }
 
+      /********** Kasseside ***************/
+      /*shoppingbag*/
+
+      #checkout {
+        margin: 0 auto;
+        padding: 2rem;
+      
+      }
+
+      #shopping-bag,
+      #information,
+      #delivery,
+      #payment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10rem;
+        margin: 1rem 0;
+
+        border: 1px solid var(--light-grey);
+        }
+
+
+      .shoppingbag-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+      }
+
+      .shoppingbag-item img {
+        max-width: 300px;
+        height: auto;
+      }
+
+      .shoppingbag-info {
+        line-height: 1.5rem;
+        margin-left: 1rem;
+      }
+
+      /*dine opplysninger*/
+
+      #form-information {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .form-rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+     
+    }
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+        #form-information label {
+            margin: 0.5rem 0;
+            visibility: visible;
+            position: static;
+        }
+        
+        .form-info-btn {
+            width: 100%;
+        }
+
+        #form-info-abort {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Levering */
+
+        #form-delivery {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+
+        }
+        .delivery-option {
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--dark-grey);
+        }
+
+        /* Betaling */
+
+        #form-payment {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .checkboxes {
+           text-align: center;
+        }
+
+        .checkboxes label {
+            font-weight: 400;
+         }
 }
