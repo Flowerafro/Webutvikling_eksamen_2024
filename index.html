@@ -17,20 +17,23 @@
     <div class="grid-container">
 
         <header>
-            <form>
-                <label for="search">Søk</label>
-                <input type="search" placeholder="Søk her" id="search">
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
             <nav>
+                <form id="header-form">
+                    <label for="search">Søk</label>
+                    <input type="search" placeholder="Søk her" id="search">
+                    <button type="submit" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="product.html">Produkter</a></li>
+                    <li><a href="index.html#pop-products">Produkter</a></li>
                     <li><a href="index.html">LOGO</a></li>
                     <li><a href="index.html#pop-category">Kategorier</a></li>
                     <li><a href="index.html#contact-index">Kontakt oss</a></li>
+
+                </ul>
+                <ul>
                     <li><i class="fa-regular fa-user"></i></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                     <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -57,60 +60,80 @@
                 <button class="pop-btn">Best sellers</button>
 
                 <section id="product-cards">
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
-                    <article class="product-card">
-                        <picture>
-                            <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                            <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                            <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                        </picture>
-                        <h3>Produktnavn</h3>
-                        <p>1999 kr</p>
-                    </article>
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+                    <a href="product.html">
+                        <article class="product-card">
+                            <picture>
+                                <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
+                                <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
+                                <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
+                            </picture>
+                            <h3>Produktnavn</h3>
+                            <p>1999 kr</p>
+                        </article>
+                    </a>
+
+
+
                 </section>
 
             </section>
@@ -120,92 +143,80 @@
                 <h2>Våre mest populære kategorier</h2>
                 <p>oppdag det beste av det beste</p>
 
-                <section id="category-cards">
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
+                <section class="categories">
+                    <article class="category-card card1">
+                        <h4>Category 1</h4>
                     </article>
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
+                    <article class="category-card card2">
+                        <h4>Category 2</h4>
                     </article>
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
+                    <article class="category-card card3">
+                        <h4>Category 3</h4>
                     </article>
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
+                    <article class="category-card card4">
+                        <h4>Category 4</h4>
                     </article>
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
+                    <article class="category-card card5">
+                        <h4>Category 5</h4>
                     </article>
-                    <article class="category-card">
-                        <h4>Kategorinavn</h4>
-                    </article>
-
                 </section>
+
 
             </section>
 
             <!-- Anmeldelse kommer 4stk til-->
             <section id="reviews">
                 <h2>Anmeldelser</h2>
-                <article class="review-card">
-                    <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
-                    <h5>Navn</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
-                        aliquam
-                        quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
-                        dignissimos
-                        dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
-                        consectetur
-                        earum.</p>
-                </article>
+                <section class="review-cards">
+                    <article class="review-card">
+                        <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
+                        <h5>Navn</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
+                            aliquam
+                            quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
+                            dignissimos
+                            dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
+                            consectetur
+                            earum.</p>
+                    </article>
 
-                <article class="review-card">
-                    <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
-                    <h5>Navn</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
-                        aliquam
-                        quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
-                        dignissimos
-                        dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
-                        consectetur
-                        earum.</p>
-                </article>
+                    <article class="review-card">
+                        <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
+                        <h5>Navn</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
+                            aliquam
+                            quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
+                            dignissimos
+                            dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
+                            consectetur
+                            earum.</p>
+                    </article>
 
-                <article class="review-card">
-                    <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
-                    <h5>Navn</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
-                        aliquam
-                        quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
-                        dignissimos
-                        dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
-                        consectetur
-                        earum.</p>
-                </article>
+                    <article class="review-card">
+                        <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
+                        <h5>Navn</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
+                            aliquam
+                            quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
+                            dignissimos
+                            dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
+                            consectetur
+                            earum.</p>
+                    </article>
 
-                <article class="review-card">
-                    <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
-                    <h5>Navn</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
-                        aliquam
-                        quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
-                        dignissimos
-                        dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
-                        consectetur
-                        earum.</p>
-                </article>
+                    <article class="review-card">
+                        <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
+                        <h5>Navn</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
+                            aliquam
+                            quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
+                            dignissimos
+                            dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
+                            consectetur
+                            earum.</p>
+                    </article>
+                </section>
 
-                <article class="review-card">
-                    <img src="https://picsum.photos/100/100" alt="anmeldelse nr.1">
-                    <h5>Navn</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita temporibus quibusdam porro
-                        aliquam
-                        quasi sequi earum molestiae, sit at voluptatibus est quisquam repudiandae quidem laborum
-                        dignissimos
-                        dicta blanditiis atque aperiam, asperiores nulla vero! Vel possimus iure nobis provident
-                        consectetur
-                        earum.</p>
-                </article>
 
             </section>
 
@@ -213,9 +224,10 @@
 
         <footer>
             <section id="footer-sec-1">
-                <img src="#" alt="logo">
-                <h3>LOGO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="index.html">
+                    <h3>LOGO</h3>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
             </section>
 
             <section id="contact-index">

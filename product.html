@@ -17,22 +17,24 @@
 <body>
 
     <div class="grid-container">
-
         <header>
-            <form>
-                <label for="search">Søk</label>
-                <input type="search" placeholder="Søk her" id="search">
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
             <nav>
+                <form id="header-form">
+                    <label for="search">Søk</label>
+                    <input type="search" placeholder="Søk her" id="search">
+                    <button type="submit" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="product.html">Produkter</a></li>
+                    <li><a href="index.html#pop-products">Produkter</a></li>
                     <li><a href="index.html">LOGO</a></li>
                     <li><a href="index.html#pop-category">Kategorier</a></li>
                     <li><a href="index.html#contact-index">Kontakt oss</a></li>
+
+                </ul>
+                <ul>
                     <li><i class="fa-regular fa-user"></i></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                     <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -46,7 +48,7 @@
 
                 <ul class="bread-crumbs">
                     <li><a href="index.html">Hjem ></a></li>
-                    <li><a href="#">Kategori > </a></li>
+                    <li><a href="index.html#pop-category">Kategori > </a></li>
                     <li><a href="product.html">Produktnavn</a></li>
                 </ul>
 
@@ -128,12 +130,12 @@
 
             </section>
         </main>
-
         <footer>
             <section id="footer-sec-1">
-                <img src="#" alt="logo">
-                <h3>LOGO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="index.html">
+                    <h3>LOGO</h3>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
             </section>
 
             <section id="contact-index">

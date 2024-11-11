@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 .grid-container {
@@ -25,11 +25,19 @@ body {
     grid-template-rows: repeat(3, auto);
     margin: 0 auto;
 }
+
+button a {
+    cursor: pointer;
+}
+
+
+
 /****************************************/
 /************ GLOBAL header *************/
 /****************************************/
 header {
     background-color: var(--white);
+    width: 100%;
     padding: 1rem;
 }
 
@@ -52,6 +60,11 @@ header {
     border: 1px solid var(--black);
     background-color: var(--white);
     padding: 0.5rem 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
 }
 
 nav ul {
@@ -85,6 +98,10 @@ footer section {
     margin: 2rem 0;
 }
 
+footer #footer-sec-1 a {
+    text-decoration: none;
+    color: var(--black);
+}
 
 #contact-index ul,
 #shortcuts ul,
@@ -167,6 +184,11 @@ footer section {
     margin: 2rem 0.5rem;
 }
 
+#product-cards a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 .product-card {
     max-width: 400px;
     min-width: 200px;
@@ -201,14 +223,51 @@ footer section {
 }
 
 .category-card {
-    width: min(96%, 400px);
-    height: 300px;
+    /* width: 100%;
+    max-width: 400px;
+    height: auto;
     border: 1px solid var(--black);
-    margin: 1rem 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+     */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 300px;
+    margin: 1rem;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+
+    position: relative;
+}
+
+.category-card h4 {
+    position: absolute;
+    color: var(--white);
+}
+
+.card1 {
+    background-image: url('/bilder/1.jpg'); /* Endre sti til bildet */
+}
+.card2 {
+    background-image: url('/bilder/2.jpg'); /* Endre sti til bildet */
+}
+
+.card3 {
+    background-image: url('/bilder/3.jpg'); /* Endre sti til bildet */
+}
+
+.card4 {
+    background-image: url('/bilder/4.jpg'); /* Endre sti til bildet */
+}
+.card5 {
+    background-image: url('/bilder/5.jpg'); /* Endre sti til bildet */
 }
 
 
@@ -223,7 +282,12 @@ footer section {
     width: 100%;
     padding: 1rem;
     margin: 1rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light-grey);
+}
+
+.review-card img {
+    max-width: 150px;
+    height: auto;
 }
 
 .review-card h5 {
@@ -460,4 +524,143 @@ footer section {
 .checkboxes label {
     font-size: 1rem;
     font-weight: 600;
+}
+
+
+/******************************************************************/
+/********************* MEDIA QUERIES DESKTOP **********************/
+/******************************************************************/
+
+@media screen and (min-width: 1025px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /************ GLOBAL header *************/
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    /********** GLOBAL footer ***************/
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer section {
+        margin: 0;
+    }
+
+    #footer-sec-1 {
+        width: 100%;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #contact-index, 
+    #shortcuts,
+    #social-media {
+        grid-row: 2 / 3;
+        padding: 1rem;
+    }
+    
+    #social-media ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+     /********** Forside ***************/
+
+    #product-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .product-card {
+        max-width: 350px;
+        margin: 0 1rem;
+    }
+
+    /*kategorier*/
+
+   .categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0.1rem;
+        gap: 0.1rem;
+        width: 100%;
+        height: auto;
+   }
+
+   .category-card {
+    margin: 0;
+    }
+
+    .card1 {
+        flex: 1 1 386px;
+        max-width: 386px;
+        grid-column: 1;
+    }
+
+    .card2 {
+        flex: 1 1 386px;
+        max-width: 386px;
+        grid-column: 2 / 3;
+    }
+
+    .card3 {
+        flex: 1 1 386px;
+        max-width: 386px;
+        grid-column: 3 /5;
+    }
+
+    .card4 {
+        flex: 1 1 864px;
+        max-width: 864px;
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin-right: -86px;
+        justify-self: stretch;
+    }
+    .card5 {
+        flex: 1 1 300px;
+        max-width: 300px;
+        width: 100%;
+        grid-column: 3 / 4;
+        grid-row: 2;
+        justify-self: right;
+    }
+
+    /* Anmeldelser */
+
+    .review-cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .review-card {
+        max-width: 289px;
+        margin: 1rem 0.2rem;
+    }
 }
