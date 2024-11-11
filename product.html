@@ -12,7 +12,7 @@
     <title>Nettbutikk - produktside</title>
 </head>
 
-<!-- DIV COUNT: 2 -->
+<!-- DIV COUNT: 3 -->
 
 <body class="grid-container">
 
@@ -21,7 +21,7 @@
             <form id="header-form">
                 <label for="search">Søk</label>
                 <input type="search" placeholder="Søk her" id="search">
-                <button type="submit" id="search-btn">
+                <button type="submit" class="white-btn">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
@@ -55,37 +55,53 @@
 
             <section class="products">
                 <div class="product-images">
-                    <picture class="product-image">
+                    <picture class="product-image prod1">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <img src="https://picsum.photos/700/700" alt="en av våre populære produkter">
                     </picture>
 
-                    <picture class="product-image">
+                    <picture class="product-image prod2">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <img src="https://picsum.photos/700/700" alt="en av våre populære produkter">
                     </picture>
 
-                    <picture class="product-image">
+                    <picture class="product-image prod3">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <img src="https://picsum.photos/700/700" alt="en av våre populære produkter">
                     </picture>
 
-                    <picture class="product-image">
+                    <picture class="product-image prod4">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <source media="(max-width: 700px)" srcset="https://picsum.photos/700/700">
                         <img src="https://picsum.photos/700/700" alt="en av våre populære produkter">
                     </picture>
-
                 </div>
 
                 <article class="product-info">
                     <h2>Produktnavn</h2>
                     <a href="#">MERKENAVN</a>
-                    <p>1000kr inkl. mva</p>
+                    <p>5 000kr inkl. mva</p>
                     <p>FARGE: <span>Beige</span></p>
+
+                    <label for="size">
+                    </label>
+                    <select name="size" id="size">
+                        <option>Velg størrelse: </option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <div class="product-btns">
+                        <button type="submit" class="black-btn prod-btn">Legg i handlekurv</button>
+                        <button class="white-btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+
                 </article>
             </section>
 
@@ -184,8 +200,6 @@
                     </article>
                 </article>
             </section>
-
-
 
         </section>
     </main>

@@ -32,7 +32,22 @@ button a {
     cursor: pointer;
 }
 
+/* buttons */
 
+.white-btn {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+}
+
+.black-btn {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 1rem;
+    margin: 2rem 0;
+    border: none;
+}
 
 /****************************************/
 /************ GLOBAL header *************/
@@ -58,11 +73,6 @@ header {
     padding: 0.5rem 1rem;
 }
 
-#search-btn {
-    border: 1px solid var(--black);
-    background-color: var(--white);
-    padding: 0.5rem 1rem;
-}
 
 nav {
     display: flex;
@@ -98,7 +108,7 @@ footer {
 }
 
 footer section {
-    margin: 2rem 0;
+    padding: 1rem;
 }
 
 footer h3 {
@@ -337,6 +347,13 @@ footer #footer-sec-1 a {
 /*********** Produkt product.html********/
 /****************************************/
 
+#product-section, 
+#similar-product {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* brødsmulesti*/
 #product-section h1 {
     visibility: hidden;
 }
@@ -363,26 +380,43 @@ footer #footer-sec-1 a {
     font-weight: bold;
 }
 
-#product-section, 
-#similar-product {
-    width: 100%;
-    margin-top: 1rem;
-}
+/* Produkt */
 
-.product-images {
+.products {
     display: flex;
     flex-direction: column;
 }
 
+.product-images {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .product-image {
-    max-width: 400px;
-    width: 100%;
-    padding: 0 1rem; 
+    padding: 0.5rem;
 }
 
 .product-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.prod1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+.prod2 {
+    grid-row: 2;
+    grid-column: 1;
+}
+.prod3 {
+    grid-row: 3;
+    grid-column: 1;
+}
+.prod4 {
+    grid-row: 1 /4;
+    grid-column: 2 / 3;
 }
 
 .product-info {
@@ -393,15 +427,32 @@ footer #footer-sec-1 a {
     gap: 1rem;
 }
 
-.product-card-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
+.product-info a {
+    color: var(--dark-grey);
 }
 
-.product-card-info h3 {
-    font-size: 1.5rem;
+.product-info span {
+    font-weight: 600;
 }
+
+.product-info select {
+    padding: 0.5rem;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.product-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.prod-btn {
+    width: 100%;
+}
+
+/* lignende produkter*/
 
 #similar-product {
     padding: 1rem;
