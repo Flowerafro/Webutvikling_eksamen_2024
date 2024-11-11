@@ -17,6 +17,8 @@
 
 body {
     font-family: sans-serif;
+
+    border: 1px solid red;
 }
 
 .grid-container {
@@ -198,20 +200,50 @@ footer #footer-sec-1 a {
     max-width: 400px;
     min-width: 200px;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .product-card img {
-    max-width: 100%;
+    width: 100%;
+    border-radius: 20px;
+
     height: auto;
 }
 
-.product-card h3 {
+.product-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-info h3 {
     margin: 1rem 0;
     font-size: 1.2rem;
     font-weight: 600;
 }
-.product-card p {
+.product-card-info p {
     margin: 1rem 0;
+}
+
+.product-card-info ul {
+    list-style: none;
+}
+
+.product-card-info ul li {
+    margin-right: 0.5rem;
+}
+
+.card-info1,
+.card-info2 {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.card-info1 {
+    justify-content: space-between;
+}
+
+.card-info1 li:first-child {
+    font-weight: 600;
 }
 
 
@@ -228,17 +260,6 @@ footer #footer-sec-1 a {
 }
 
 .category-card {
-    /* width: 100%;
-    max-width: 400px;
-    height: auto;
-    border: 1px solid var(--black);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-     */
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,24 +301,36 @@ footer #footer-sec-1 a {
 
 #reviews {
     width: 100%;
-    padding: 1rem;
 }
 
 .review-card {
     width: 100%;
+    max-width: 300px;
     padding: 1rem;
     margin: 1rem 0;
     border: 1px solid var(--light-grey);
+    border-radius: 20px;
 }
 
 .review-card img {
     max-width: 150px;
+    border-radius: 50%;
     height: auto;
 }
 
 .review-card h5 {
     font-size: 1.2rem;
     margin: 1rem 0;
+}
+
+.review-card ul {
+    list-style: none;
+    display: flex;
+}
+
+.review-card ul li {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /****************************************/
@@ -676,6 +709,7 @@ footer #footer-sec-1 a {
     .review-cards {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .review-card {
