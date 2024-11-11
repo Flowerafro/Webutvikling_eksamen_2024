@@ -338,13 +338,12 @@ footer #footer-sec-1 a {
 
 .product-image {
     max-width: 400px;
-    min-width: 200px;
     width: 100%;
     padding: 0 1rem; 
 }
 
 .product-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -663,4 +662,55 @@ footer #footer-sec-1 a {
         max-width: 289px;
         margin: 1rem 0.2rem;
     }
+
+     /********** Produktside ***************/
+
+     .products {
+        display: flex;
+        flex-direction: row;
+     }
+
+     .product-images {
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        grid-gap: 0.1rem;
+     }
+
+     .product-image {
+        max-width: calc(160px * 3); /*tar opp max bredde til children 2-4*/
+        padding: 0;
+        width: 100%;
+     }
+
+     .product-image:nth-child(1) {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        width: 100%;
+     }
+
+     .product-image:nth-child(2) {
+        grid-column: 1;
+     }
+     .product-image:nth-child(3) {
+        grid-column: 2;
+     }
+     .product-image:nth-child(4) {
+        grid-column: 3;
+     }
+
+     .product-image:nth-child(2),
+    .product-image:nth-child(3),
+    .product-image:nth-child(4) {
+        grid-row: 2;
+        max-width: 160px;
+    }
+
+     .product-info {
+        max-width: 440px;
+        width: 100%;
+        margin-left: 10rem;
+     }
+
 }
