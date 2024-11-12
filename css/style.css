@@ -56,44 +56,72 @@ header {
     background-color: var(--white);
     width: 100%;
     padding: 1rem;
+    margin: 1rem 0;
 }
 
-#header-form {
+.search-container {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
     position: relative;
 }
 
-#header-form label {
-    visibility: hidden;
+#search-bar {
+    width: 100%;
+    padding: 0.8rem; 
+    font-size: 1rem;
+    border: 2px solid var(--grey);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.search-icon {
     position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); 
+    color: var(--dark-grey);
 }
-
-#header-form input {
-    border: 1px solid var(--grey);
-    background-color: var(--white);
-    padding: 0.5rem 1rem;
-}
-
 
 nav {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
+    text-align: center;
 }
 
-nav ul li:nth-child(3) {
-    font-size: 1.5rem;
+#logo {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--black);
+    padding: 1rem 0;
 }
 
 nav ul li {
-   margin: 1rem 0;
+   margin: 1.5rem 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--black);
+}
+
+nav .nav-icons {
+    display: flex;
+    flex-direction: row;
+    padding: 0; 
+    margin: 0;
+}
+
+nav .nav-icons li {
+    margin: 0 1rem;
+    font-size: 1.2rem;
 }
 
 
