@@ -8,6 +8,11 @@
     --grey: #808080;
     --dark-grey: #333;
     --black: #000;
+
+    --font-banner-title: clamp(1.2rem, 2.5vw, 2rem);
+    --font-banner-text: clamp(0.9rem, 2.5vw, 1.5rem);
+
+    --calc-responsive-width: calc(100% - 2rem);
 }
 
 * {
@@ -37,15 +42,13 @@ button a {
 .white-btn {
     border: 1px solid var(--grey);
     background-color: var(--white);
-    padding: 0.5rem 1rem;
-    margin: 2rem 0;
+    padding: 1rem;
 }
 
 .black-btn {
     background-color: var(--dark-grey);
     color: var(--white);
     padding: 1rem;
-    margin: 2rem 0;
     border: none;
 }
 
@@ -54,15 +57,14 @@ button a {
 /****************************************/
 header {
     background-color: var(--white);
-    width: 100%;
+    width: var(--calc-responsive-width);
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 0 auto;
 }
 
 .search-container {
-    width: 300px;
-    display: block;
-    margin: 0 auto;
+    width: 200px;
+    margin: 0;
     position: relative;
 }
 
@@ -132,21 +134,45 @@ nav .nav-icons li {
 footer {
     border-top: 1px solid var(--black);
     margin: 1rem 0;
-    padding: 1rem 0;
-    width: 100%;
+    padding: 1rem;
+    width: var(--calc-responsive-width);
 }
 
 footer section {
-    padding: 1rem;
-}
-
-footer h3 {
-    text-transform: uppercase;
+    margin: 1rem 0;
 }
 
 footer #footer-sec-1 a {
     text-decoration: none;
+    font-size: 1.2rem;
     color: var(--black);
+}
+
+footer #footer-sec-1 a h3 {
+    margin-top: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+footer #footer-sec-2 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer #footer-sec-2 h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+/* Kontakt, Snarveier & Sosiale medier */
+
+#contact-index,
+#shortcuts,
+#social-media {
+    margin-top: 2rem;
 }
 
 #contact-index ul,
@@ -159,88 +185,156 @@ footer #footer-sec-1 a {
 #contact-index ul li i,
 #social-media ul li a i {
     margin: 0.5rem;
+    color: var(--black);
+    font-size: 1rem;
 }
-
-#shortcuts li {
-    margin-top: 1rem;
+#contact-index ul li,
+#shortcuts ul li {
+    font-size: 0.9rem;
 }
 
 #shortcuts ul li a,
 #social-media ul li a {
     text-decoration: none;
-}
-
-#shortcuts ul li a {
     color: var(--black);
 }
 
-#social-media ul li a i {
-    color: var(--black);
-    font-size: 1.5rem;
+/* Snarveier */
+#shortcuts li {
+    margin-top: 1rem;
 }
+
+/* Sosiale medier */
+#social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+
 
 /****************************************/
 /************ FORSIDE index.html*********/
 /****************************************/
 
+/*** Banner ***/
+
 #banner {
-    background-color: var(--light-grey);
-    padding: 2rem;
-    margin: 2rem 1rem;
-    text-align: right;
-}
-
-#banner h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: right;
-}
-
-#banner p {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-}
-
-#banner a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--black);
-    font-weight: 600;
-    background-color: var(--white);
-    padding: 1rem;
-    cursor: pointer;
+    width: var(--calc-responsive-width);
+    margin: 0 auto;
 } 
 
-/* Produktkort */
-
-#pop-products {
+.banner-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    padding: 1rem;
+    height: auto;
+    min-height: 500px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#pop-products h2 {
+.banner-img1 {
+    background-image: url('/bilder/banner1.jpg');
+}
+/* Image by <a href="https://pixabay.com/users/kriemer-932379/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7641122">Kerstin Riemer</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7641122">Pixabay</a> */
+.banner-img2 {
+    background-image: url('/bilder/banner2.jpg');
+    display: none;
+}
+/* Image by <a href="https://pixabay.com/users/shogun-1310047/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Karl Egger</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Pixabay</a>*/
+
+.banner-img3 {
+    background-image: url('/bilder/banner3.jpg');
+    display: none;
+}
+/*Image by <a href="https://pixabay.com/users/lobostudiohamburg-13838/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Thomas Ulrich</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Pixabay</a>*/
+
+.banner-title {
+    color: var(--black);
+    font-size: var(--font-banner-title);
+    font-weight: 700;
+    margin-top: 2rem;
+    width: 50%;
+}
+
+.banner-text {
+    color: var(--black);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    width: 50%;
+}
+
+.text-right {
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.text-left {
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 1rem;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.banner-btn {
+    width: fit-content;
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: 20px; 
+    padding: 0.5rem; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Produktkort & Kategorikort */
+
+#pop-products,
+#pop-category {
+    width: var(--calc-responsive-width);
+    margin: 0 auto;
+}
+
+#pop-products h2,
+#pop-category h2 {
+    padding: 1rem;
     margin: 1rem 0;
     font-size: 1.6rem;
     text-align: center;
 }
 
-#pop-products p {
+#pop-products p,
+#pop-category p {
     text-align: center;
 }
+
+/* Produktkort */
 
 .pop-btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    border: red 1px solid;
 }
 
 .pop-btn {
     border: 1px solid var(--black);
     border-radius: 20px;
     background-color: var(--white);
-    padding: 1rem 0.5rem;
-    margin: 1rem 0.5rem;
+    font-size: 0.7rem;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 .pop-btn.active {
@@ -258,16 +352,15 @@ footer #footer-sec-1 a {
 }
 
 .product-card {
-    max-width: 400px;
-    min-width: 200px;
     width: 100%;
     margin-bottom: 2rem;
 }
 
+.product-card picture,
 .product-card img {
     width: 100%;
+    max-width: 100%;
     border-radius: 20px;
-
     height: auto;
 }
 
@@ -312,27 +405,10 @@ footer #footer-sec-1 a {
 
 .card-info2:last-child {
     font-weight: 600;
-
 }
 
 
 /* Kategoritkort */
-
-#pop-category {
-    width: 100%;
-    max-width: 400px;
-    padding: 1rem;
-}
-
-#pop-category h2 {
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-#pop-category p {
-    text-align: center;
-}
 
 .category-card {
     display: flex;
@@ -395,17 +471,18 @@ footer #footer-sec-1 a {
 
 /* Anmeldelser */
 
-/* #reviews {
+#reviews {
     width: 100%;
-    padding: 1rem;
-} */
-
-.review-cards {
+    max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
     padding: 1rem;
 }
 
+.review-cards {
+    padding: 1rem 0;
+}
+
 .review-card {
-    width: 100%;
+    width: 70%;
     padding: 1rem;
     margin: 1rem 0;
     border: 1px solid var(--light-grey);
@@ -440,7 +517,7 @@ footer #footer-sec-1 a {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .side-scroll-child {
@@ -498,6 +575,7 @@ footer #footer-sec-1 a {
     display: grid;
     grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    max-width: 800px;
 }
 
 .product-image {
@@ -552,6 +630,7 @@ footer #footer-sec-1 a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -563,27 +642,35 @@ footer #footer-sec-1 a {
 
 #similar-product {
     padding: 1rem;
+    position: relative;
 }
 
 #similar-product h2 {
     padding-left: 1rem;
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 #similar-product {
     width: 100%;
+    max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
+    padding: 1rem;
 }
 
 .similar-arrow {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
     padding: 1rem;
     font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .similar-arrow a {
     margin-right: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .similar-products a {
@@ -596,6 +683,12 @@ footer #footer-sec-1 a {
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
+    max-width: 100%;
+}
+
+/* side scroll similar products*/
+.similar-scroll-child {
+    flex: 0 0 auto;
 }
 
 
@@ -791,12 +884,18 @@ footer #footer-sec-1 a {
 }
 
 .checkboxes {
-    text-align: left;
+    text-align: center;
+}
+
+.checkboxes #price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
 }
 
 .checkboxes p {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     margin: 1rem 0;
 }
 
@@ -816,11 +915,20 @@ footer #footer-sec-1 a {
         margin: 0 auto;
     }
     /************ GLOBAL header *************/
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
+        width: 100%;
         padding: 1rem;
     }
 
@@ -831,12 +939,16 @@ footer #footer-sec-1 a {
         gap: 1.5rem;
     }
 
+    .search-container {
+        margin: 0;
+    }
+
     /********** GLOBAL footer ***************/
 
     footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 30% 1fr;
     }
 
     footer section {
@@ -877,11 +989,47 @@ footer #footer-sec-1 a {
 
      /********** Forside ***************/
 
+     /********** Banner ***************/
+
+
+     .banner-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+     .banner-img2 {
+        background-image: url('/bilder/banner2.jpg');
+        display: flex;
+    }
+    /* Image by <a href="https://pixabay.com/users/shogun-1310047/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Karl Egger</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Pixabay</a>*/
+    
+    .banner-img3 {
+        background-image: url('/bilder/banner3.jpg');
+        display: flex;
+    }
+    /*Image by <a href="https://pixabay.com/users/lobostudiohamburg-13838/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Thomas Ulrich</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Pixabay</a>*/
+    
+    
+    .banner-btn {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+
+    /* product cards*/
+
     #product-cards {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+    }
+
+    .pop-btns {
+        width: 50%;
+        margin: 0 auto;
+        justify-content: space-evenly;
     }
 
     .pop-btn:hover {
@@ -948,19 +1096,17 @@ footer #footer-sec-1 a {
 
     /* Anmeldelser */
 
-    .review-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    #reviews {
+        max-width: 1200px;
+      
     }
 
     .review-card {
-        max-width: 289px;
-        margin: 1rem 0.2rem;
+        width: 25%;
     }
 
-    /* Side scroll */
-
+   
+    /* Side scroll in desktop */
 
 .side-scroll-parent {
     display: flex;
@@ -991,6 +1137,10 @@ footer #footer-sec-1 a {
      }
 
      .product-images {
+        /* max-width: 50%; */
+     }
+
+    /*  .product-images {
         max-width: 700px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -999,7 +1149,7 @@ footer #footer-sec-1 a {
      }
 
      .product-image {
-        max-width: calc(160px * 3); /*tar opp max bredde til children 2-4*/
+        max-width: calc(160px * 3);
         padding: 0;
         width: 100%;
      }
@@ -1026,20 +1176,28 @@ footer #footer-sec-1 a {
         grid-row: 2;
         max-width: 160px;
     }
-
+ */
      .product-info {
-        max-width: 440px;
+        width: 70%;
+        /* max-width: 440px;
         width: 100%;
-        margin-left: 10rem;
+        margin-left: 10rem; */
      }
 
-      /********** Kasseside ***************/
+     /* lignende produkter*/
+
+     #similar-product {
+        width: 100%;
+        max-width: 1200px;
+        padding: 1rem 3rem;
+
+      /************************************* Kasseside *************************/
       /*shoppingbag*/
 
       #checkout {
         margin: 0 auto;
         padding: 2rem;
-      
+
       }
 
       #shopping-bag,
