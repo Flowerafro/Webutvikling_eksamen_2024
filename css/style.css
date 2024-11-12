@@ -5,6 +5,7 @@
 :root {
     --white: #fff;
     --light-grey: #D3D3D3;
+    --grey: #808080;
     --dark-grey: #333;
     --black: #000;
 }
@@ -17,8 +18,7 @@
 
 body {
     font-family: sans-serif;
-
-    border: 1px solid red;
+    max-width: 1200px;
 }
 
 .grid-container {
@@ -103,7 +103,7 @@ nav ul li a {
 
 footer {
     border-top: 1px solid var(--black);
-    margin: 1rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
@@ -156,7 +156,7 @@ footer #footer-sec-1 a {
 
 #banner {
     background-color: var(--light-grey);
-    padding: 3rem 4rem;
+    padding: 2rem;
     margin: 2rem 1rem;
     text-align: right;
 }
@@ -164,6 +164,7 @@ footer #footer-sec-1 a {
 #banner h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    text-align: right;
 }
 
 #banner p {
@@ -192,13 +193,34 @@ footer #footer-sec-1 a {
 #pop-products h2 {
     margin: 1rem 0;
     font-size: 1.6rem;
+    text-align: center;
+}
+
+#pop-products p {
+    text-align: center;
+}
+
+.pop-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .pop-btn {
     border: 1px solid var(--black);
+    border-radius: 20px;
     background-color: var(--white);
-    padding: 1rem;
-    margin: 2rem 0.5rem;
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.5rem;
+}
+
+.pop-btn.active {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+#product-cards {
+    margin-top: 2rem;
 }
 
 #product-cards a {
@@ -353,6 +375,23 @@ footer #footer-sec-1 a {
     margin-top: 1rem;
 }
 
+.similar-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.similar-arrow a {
+    margin-right: 0.5rem;
+}
+
+.similar-products a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 /* brødsmulesti*/
 #product-section h1 {
     visibility: hidden;
@@ -478,6 +517,13 @@ footer #footer-sec-1 a {
     font-size: 2rem;
 }
 
+#checkout h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+}
+
 #shopping-bag, 
 #information,
 #delivery,
@@ -485,19 +531,14 @@ footer #footer-sec-1 a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem 0;
-    margin-top: 1rem;
-}
-
-#shopping-bag, 
-#information,
-#delivery,
-#payment, .checkout-title {
-    margin-bottom: 1rem;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border: 1px solid var(--light-grey);
 }
 
 .checkout-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     width: 100%;
 }
@@ -505,56 +546,86 @@ footer #footer-sec-1 a {
 
 .shoppingbag-item {
     width: 100%;
-    padding: 1rem 0;
+    height: calc(200px * 2, auto);
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
 .shoppingbag-item img {
-    max-width: 400px;
+    max-width: 200px;
     height: auto;
 }
 
-.shoppingbag-item h3 {
+.shoppingbag-info {
+    list-style: none;
+    line-height: 1.5rem;
+    margin: 1.5rem;
+  }
+
+.shoppingbag-info li:first-child {
     margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
     font-size: 1.2rem;
 }
 
-.shoppingbag-item p {
-    font-size: 1rem;
+.shoppingbag-item select {
+    background-color: var(--light-grey);
+    border: none;
+    padding: 1rem;
 }
+
+.shoppingbag-item input {
+    padding: 1rem;
+    border: 1px solid var(--light-grey);
+    color: var(--black);
+}
+
+.shoppingbag-icons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.shoppingbag-icons li {
+    margin-right: 1rem;
+}
+
 
 /* 2. Dine opplysninger */
 
-#form-information {
+.form-information {
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 0;
-    position: relative;
+    margin-top: 2rem;
 }
 
-#form-information p {
-    font-size: 1rem;
+.form-information p {
+    font-size: 0.9rem;
     font-weight: bold;
     margin-top: 1rem;
 }
 
-#form-information label {
-    visibility: hidden;
-    position: absolute;
+.form-information label {
+   color: var(--dark-grey);
+   font-size: 0.9rem;
 }
 
-#form-information input {
-    border: 1px solid var(--black);
+.form-information input {
+    border: 1px solid var(--light-grey);
     background-color: var(--white);
     padding: 1rem;
-    margin: 2px 0;
+    margin: 5px 0;
     width: 100%;
 }
 
 .form-info-btn {
    background-color: var(--dark-grey);
    color: var(--white);
-   width: fit-content;
+   width: 100%;
    padding: 1rem;
    margin: 2rem 0;
    border: none;
@@ -563,21 +634,45 @@ footer #footer-sec-1 a {
 #form-info-abort {
     text-transform: capitalize;
     font-size: 1rem;
+    text-align: center;
 }
 
 
 /* 3. Levering */
 
-#form-delivery h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+
+.delivery-option {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--light-grey);
+}
+.delivery-option input[type="radio"] {
+    margin-right: 0.5rem;
 }
 
-#form-delivery label {
-    font-size: 1rem;
+.delivery-option label {
+    font-size: 0.9rem;
     font-weight: bold;
 }
+
+.delivery-option ul {
+    list-style: none;
+}
+
+.delivery-option ul li {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.delivery-option ul li:first-child {
+    font-weight: 600;
+    color: var(--grey);
+}
+
+.delivery-option ul li span {
+    margin-right: 0.5rem;
+}
+
 
 /* 4. Betaling */
 
@@ -586,21 +681,15 @@ footer #footer-sec-1 a {
     flex-direction: column;
 }
 
-#form-payment h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-
 #form-payment input {
-    border: 1px solid var(--black);
+    border: 1px solid var(--light-grey);
     background-color: var(--white);
     padding: 1rem;
     margin: 2px 0;
 }
 
 #form-payment label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -699,6 +788,12 @@ footer #footer-sec-1 a {
         gap: 1rem;
     }
 
+    .pop-btn:hover {
+        background-color: var(--grey);
+        border: 1px solid var(--grey);
+        color: var(--white);
+    }
+
     .product-card {
         max-width: 350px;
         margin: 0 1rem;
@@ -770,6 +865,11 @@ footer #footer-sec-1 a {
 
      /********** Produktside ***************/
 
+     .similar-arrow {
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+     }
+
      .products {
         display: flex;
         flex-direction: row;
@@ -837,7 +937,7 @@ footer #footer-sec-1 a {
         justify-content: center;
         align-items: center;
 
-        padding: 10rem;
+        padding: 15rem;
         margin: 1rem 0;
 
         border: 1px solid var(--light-grey);
@@ -865,7 +965,7 @@ footer #footer-sec-1 a {
 
       /*dine opplysninger*/
 
-      #form-information {
+      .form-information {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -885,7 +985,7 @@ footer #footer-sec-1 a {
         width: 100%;
     }
 
-        #form-information label {
+        .form-information label {
             margin: 0.5rem 0;
             visibility: visible;
             position: static;
@@ -907,13 +1007,19 @@ footer #footer-sec-1 a {
             flex-direction: column;
             flex-wrap: wrap;
             width: 100%;
+        }
 
-        }
         .delivery-option {
-            padding: 1rem;
             margin: 1rem 0;
-            border: 1px solid var(--dark-grey);
+            position: relative;
         }
+
+        .delivery-option ul li i {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        
 
         /* Betaling */
 

@@ -8,6 +8,8 @@
     <link href="ikoner/css/fontawesome.css" rel="stylesheet">
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
+    <link href="ikoner/css/regular.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Nettbutikk - kasseside</title>
 </head>
@@ -44,94 +46,81 @@
         <h1>Kasse</h1>
         <section id="shopping-bag">
             <h2 class="checkout-title">1. Shoppingbagen din</h2>
-            <article class="shoppingbag-item">
-                <picture>
-                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                </picture>
-                <article class="shoppingbag-info">
-                    <h3>Product name</h3>
-                    <p>1999 kr</p>
-                    <p>Farge: Beige</p>
-                </article>
-            </article>
 
+            <!-- Legg til flere bag items -->
             <article class="shoppingbag-item">
                 <picture>
                     <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                     <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
                     <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
                 </picture>
-                <article class="shoppingbag-info">
-                    <h3>Product name</h3>
-                    <p>1999 kr</p>
-                    <p>Farge: Beige</p>
-                </article>
-            </article>
-
-            <article class="shoppingbag-item">
-                <picture>
-                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                </picture>
-                <article class="shoppingbag-info">
-                    <h3>Product name</h3>
-                    <p>1999 kr</p>
-                    <p>Farge: Beige</p>
-                </article>
-            </article>
-
-            <article class="shoppingbag-item">
-                <picture>
-                    <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
-                    <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
-                    <img src="https://picsum.photos/800/800" alt="populært produkt nr.1">
-                </picture>
-                <article class="shoppingbag-info">
-                    <h3>Product name</h3>
-                    <p>1999 kr</p>
-                    <p>Farge: Beige</p>
-                </article>
+                <ul class="shoppingbag-info">
+                    <li>Product name</li>
+                    <li>Kr. 1999</li>
+                    <li>Farge: Beige</li>
+                </ul>
+                <label for="bag-size">Størrelse
+                </label>
+                <select name="bag-size" id="bag-size">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <label for="bag-quantity">Antall
+                </label>
+                <input type="number" min="1" max="9" id="bag-quantity">
+                <ul class="shoppingbag-icons">
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><i class="fa-solid fa-trash"></i></li>
+                </ul>
             </article>
         </section>
 
         <section id="information">
             <h2 class="checkout-title">2. Dine opplysninger</h2>
 
-            <form id="form-information">
+            <form class="form-information">
                 <p>Leveringsadresse</p>
                 <section class="form-rows">
                     <div class="form-row">
-                        <label for="fname">Fornavn*</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Fornavn">
+                        <label for="fname">Fornavn</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Fornavn*">
                     </div>
 
                     <div class="form-row">
-                        <label for="lname">Etternavn*</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Etternavn">
+                        <label for="lname">Etternavn</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Etternavn*">
                     </div>
                 </section>
 
-                <label for="gateadresse">Gateadresse*</label>
-                <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse">
+                <label for="gateadresse">Gateadresse</label>
+                <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
 
                 <section class="form-rows">
                     <div class="form-row">
-                        <label for="postnummer">Postnummer*</label>
+                        <label for="postnummer">Postnummer</label>
                         <input type="number" id="postnummer" name="postnummer" min="0" max="9999"
-                            placeholder="Postnummer">
+                            placeholder="Postnummer*">
                     </div>
 
                     <div class="form-row">
-                        <label for="poststed">Poststed*</label>
-                        <input type="text" id="poststed" name="poststed" placeholder="Poststed">
+                        <label for="poststed">Poststed</label>
+                        <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
                     </div>
                 </section>
-                <button type="submit" class="form-info-btn">Lagre</button>
-                <a href="#" id="form-info-abort">Avbryt</a>
             </form>
+            <form class="form-information">
+                <p>Kontaktinformasjon</p>
+                <label for="epost">E-post</label>
+                <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
+
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
+            </form>
+            <button type="submit" class="form-info-btn">Lagre</button>
+            <a href="#" id="form-info-abort">Avbryt</a>
         </section>
 
         <section id="delivery">
@@ -142,6 +131,13 @@
                 <span class="delivery-option">
                     <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
                     <label for="ekspress-hjem">Ekspress hjemlevering</label>
+                    <ul>
+                        <li>3-4 virkedager</li>
+                        <li><span>59 kr</span><i class="fa-solid fa-truck"></i></li>
+                        <li>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hje til deg før froksot
+                            mandag til lørdag. *For leveringer til postnummer 4000-7999 er leveringstiden 2 virkedager
+                            for postnummer 8000-9999 er leveringstiden 3 virkedager.</li>
+                    </ul>
                 </span>
                 <br>
 
@@ -149,12 +145,22 @@
                     <input type="radio" id="ekspress-utleveringssted" name="levering"
                         value="Ekspress pakke til utleveringssted">
                     <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
+                    <ul>
+                        <li>1-3 virkedager</li>
+                        <li><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
+                    </ul>
                 </span>
                 <br>
 
                 <span class="delivery-option">
                     <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
-                    <label for="standard-hjemlevering">Standard hjemlevering</label></span>
+                    <label for="standard-hjemlevering">Standard hjemlevering</label>
+                    <ul>
+                        <li>5-8 virkedager</li>
+                        <li><span>Gratis</span><i class="fa-solid fa-box"></i></li>
+                        <li>Leveres hjem til deg før frokost mandag til lørdag innen 5-8 virkedager.</li>
+                    </ul>
+                </span>
                 <br><br>
             </form>
         </section>
@@ -163,7 +169,8 @@
             <h2 class="checkout-title">4. Betaling</h2>
 
             <form id="form-payment">
-                <h3>Betal med kort</h3>
+                <h3>Betal med kort <i class="fa-solid fa-credit-card"></i></h3>
+
                 <label for="kortnummer">Kortnummer</label>
                 <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
                     placeholder="****-****-****-4444">
