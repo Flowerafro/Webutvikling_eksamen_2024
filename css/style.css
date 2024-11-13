@@ -199,6 +199,11 @@ footer #footer-sec-2 h4 {
     color: var(--black);
 }
 
+/* Kontakt */
+#contact-index {
+    width: 50%;
+}
+
 /* Snarveier */
 #shortcuts li {
     margin-top: 1rem;
@@ -704,6 +709,11 @@ footer #footer-sec-2 h4 {
 #checkout h1 {
     margin: 1rem 0;
     font-size: 2rem;
+    text-align: center;
+}
+
+#checkout h2 {
+    font-size: 1.2rem;
 }
 
 #checkout h3 {
@@ -741,31 +751,39 @@ footer #footer-sec-2 h4 {
 }
 
 .shoppingbag-item img {
-    max-width: 200px;
+    max-width: 160px;
     height: auto;
 }
 
 .shoppingbag-info {
-    list-style: none;
     line-height: 1.5rem;
-    margin: 1.5rem;
+    margin: 1rem;
   }
 
-.shoppingbag-info li:first-child {
+  .shoppingbag-info h3 {
     margin-top: 1rem;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.2rem;
+  }
+
+  .shoppingbag-info ul {
+    list-style: none;
+  }
+
+.shoppingbag-item label {
+    font-size: 0.9rem;
 }
 
 .shoppingbag-item select {
     background-color: var(--light-grey);
     border: none;
-    padding: 1rem;
+    padding: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .shoppingbag-item input {
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid var(--light-grey);
     color: var(--black);
 }
@@ -775,7 +793,7 @@ footer #footer-sec-2 h4 {
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    margin: 1rem 0;
+    margin-top: 2rem;
 }
 
 .shoppingbag-icons li {
@@ -1190,14 +1208,12 @@ footer #footer-sec-2 h4 {
         width: 100%;
         max-width: 1200px;
         padding: 1rem 3rem;
+     }
 
       /************************************* Kasseside *************************/
       /*shoppingbag*/
-
-      #checkout {
-        margin: 0 auto;
-        padding: 2rem;
-
+      #checkout h1 {
+        font-size: 1.6rem;
       }
 
       #shopping-bag,
@@ -1209,31 +1225,64 @@ footer #footer-sec-2 h4 {
         justify-content: center;
         align-items: center;
 
-        padding: 15rem;
-        margin: 1rem 0;
-
         border: 1px solid var(--light-grey);
         }
 
+        #checkout h2 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        #checkout h3 {
+            margin-bottom: 0;
+        }
 
       .shoppingbag-item {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
 
-        width: 100%;
-      }
-
-      .shoppingbag-item img {
-        max-width: 300px;
-        height: auto;
+        width: 50%;
+        padding: 0;
+        margin: 1rem;
       }
 
       .shoppingbag-info {
-        line-height: 1.5rem;
-        margin-left: 1rem;
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        line-height: 1rem;
       }
+
+      .shoppingbag-info ul {
+        margin-bottom: 1rem;
+      }
+    
+      .shoppingbag-info ul li {
+        font-size: 0.8rem;
+      }
+
+      .shoppingbag-icons {
+        display: flex;
+        flex-direction: column;   
+        gap: 0.5rem;
+        margin: 0;
+      }
+
+    .shoppingbag-item select {
+        background-color: var(--light-grey);
+        border: none;
+        padding: 0.7rem;
+        margin-right: 0.5rem;
+        font-size: 0.6rem;
+    }
+    
+    .shoppingbag-item input {
+        padding: 0.5rem;
+        border: 1px solid var(--light-grey);
+        color: var(--black);
+    }
 
       /*dine opplysninger*/
 
