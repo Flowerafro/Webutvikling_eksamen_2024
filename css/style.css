@@ -4,6 +4,7 @@
 
 :root {
     --white: #fff;
+    --lighter-grey: #F3F3F3;
     --light-grey: #D3D3D3;
     --grey: #808080;
     --dark-grey: #333;
@@ -245,18 +246,18 @@ footer #footer-sec-2 h4 {
 .banner-img1 {
     background-image: url('/bilder/banner1.jpg');
 }
-/* Image by <a href="https://pixabay.com/users/kriemer-932379/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7641122">Kerstin Riemer</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7641122">Pixabay</a> */
+/* Kilde: https://pixabay.com/photos/sunrise-jungle-valley-forest-1950873/ */
 .banner-img2 {
     background-image: url('/bilder/banner2.jpg');
     display: none;
 }
-/* Image by <a href="https://pixabay.com/users/shogun-1310047/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Karl Egger</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6964950">Pixabay</a>*/
+/* Kilde: https://pixabay.com/photos/mountains-fog-fall-landscape-6964950/ */
 
 .banner-img3 {
     background-image: url('/bilder/banner3.jpg');
     display: none;
 }
-/*Image by <a href="https://pixabay.com/users/lobostudiohamburg-13838/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Thomas Ulrich</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Pixabay</a>*/
+/* Kilde: https://pixabay.com/photos/aurora-borealis-lake-snow-aurora-5599375/*/
 
 .banner-title {
     color: var(--black);
@@ -291,7 +292,7 @@ footer #footer-sec-2 h4 {
 
 .banner-btn {
     width: fit-content;
-    background-color: var(--light-grey);
+    background-color: var(--lighter-grey);
     border: none;
     border-radius: 20px; 
     padding: 0.5rem; 
@@ -329,8 +330,6 @@ footer #footer-sec-2 h4 {
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-
-    border: red 1px solid;
 }
 
 .pop-btn {
@@ -1050,6 +1049,11 @@ footer #footer-sec-2 h4 {
         justify-content: space-evenly;
     }
 
+    .pop-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
     .pop-btn:hover {
         background-color: var(--grey);
         border: 1px solid var(--grey);
@@ -1225,6 +1229,8 @@ footer #footer-sec-2 h4 {
         justify-content: center;
         align-items: center;
 
+        width: 100%;
+
         border: 1px solid var(--light-grey);
         }
 
@@ -1237,15 +1243,20 @@ footer #footer-sec-2 h4 {
             margin-bottom: 0;
         }
 
+        /* litt smalere vidde på innholdet på checkout.html*/
+        .content-width-desktop {
+            width: 55%;
+        } 
+
       .shoppingbag-item {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-start;
+        height: auto;
 
-        width: 50%;
         padding: 0;
-        margin: 1rem;
+        margin: 0.5rem 1rem;
       }
 
       .shoppingbag-info {
@@ -1290,7 +1301,6 @@ footer #footer-sec-2 h4 {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
     }
 
     .form-rows {
@@ -1312,9 +1322,7 @@ footer #footer-sec-2 h4 {
             position: static;
         }
         
-        .form-info-btn {
-            width: 100%;
-        }
+        
 
         #form-info-abort {
             width: 100%;
@@ -1324,10 +1332,7 @@ footer #footer-sec-2 h4 {
         /* Levering */
 
         #form-delivery {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width: 100%;
+
         }
 
         .delivery-option {
