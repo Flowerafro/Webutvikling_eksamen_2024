@@ -53,9 +53,9 @@ button a {
     border: none;
 }
 
-/****************************************/
-/************ GLOBAL header *************/
-/****************************************/
+/*********************************************************************************/
+/******************************* GLOBAL header ***********************************/
+/*********************************************************************************/
 header {
     background-color: var(--white);
     width: var(--calc-responsive-width);
@@ -218,9 +218,9 @@ footer #footer-sec-2 h4 {
 }
 
 
-/****************************************/
-/************ FORSIDE index.html*********/
-/****************************************/
+/*********************************************************************************/
+/*************************** FORSIDE index.html***********************************/
+/*********************************************************************************/
 
 /*** Banner ***/
 
@@ -528,9 +528,9 @@ footer #footer-sec-2 h4 {
     flex: 0 0 auto;
 }
 
-/****************************************/
-/*********** Produkt product.html********/
-/****************************************/
+/*********************************************************************************/
+/*************************** Produkt product.html*********************************/
+/*********************************************************************************/
 
 #product-section, 
 #similar-product, 
@@ -696,9 +696,9 @@ footer #footer-sec-2 h4 {
 }
 
 
-/*****************************************/
-/********* Kasseside checkout.html********/
-/*****************************************/
+/*********************************************************************************/
+/*************************** Kasseside checkout.html *****************************/
+/*********************************************************************************/
 
 #checkout {
     width: 100%;
@@ -740,7 +740,7 @@ footer #footer-sec-2 h4 {
     text-transform: uppercase;
     width: 100%;
 }
-/* 1. Shopping bagen din */
+/*********** 1. Shopping bagen din **************/
 
 .shoppingbag-item {
     width: 100%;
@@ -800,7 +800,7 @@ footer #footer-sec-2 h4 {
 }
 
 
-/* 2. Dine opplysninger */
+/*************** 2. Dine opplysninger ***************/
 
 .form-information {
     display: flex;
@@ -844,8 +844,14 @@ footer #footer-sec-2 h4 {
 }
 
 
-/* 3. Levering */
+/****************** 3. Levering ***************/
 
+#form-delivery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .delivery-option {
     display: block;
@@ -880,7 +886,7 @@ footer #footer-sec-2 h4 {
 }
 
 
-/* 4. Betaling */
+/******************* 4. Betaling ****************/
 
 #form-payment {
     display: flex;
@@ -922,9 +928,9 @@ footer #footer-sec-2 h4 {
 }
 
 
-/******************************************************************/
-/********************* MEDIA QUERIES DESKTOP **********************/
-/******************************************************************/
+/*********************************************************************************/
+/***************************** MEDIA QUERIES DESKTOP *****************************/
+/*********************************************************************************/
 
 @media screen and (min-width: 1025px) {
     body {
@@ -966,6 +972,7 @@ footer #footer-sec-2 h4 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 30% 1fr;
+        margin: 1rem;
     }
 
     footer section {
@@ -1004,9 +1011,9 @@ footer #footer-sec-2 h4 {
         gap: 1rem;
     }
 
-     /********** Forside ***************/
+    /************************************** Forside ***************************************/
 
-     /********** Banner ***************/
+    /********** Banner ***************/
 
 
      .banner-image {
@@ -1141,7 +1148,7 @@ footer #footer-sec-2 h4 {
     flex: 0 0 auto;
 }
 
-     /********** Produktside ***************/
+/***************************************** Produkt *************************************/
 
      #similar-product {
         width: 100%;
@@ -1214,8 +1221,16 @@ footer #footer-sec-2 h4 {
         padding: 1rem 3rem;
      }
 
-      /************************************* Kasseside *************************/
-      /*shoppingbag*/
+    /*********************************** Kasseside  *******************************************/
+    
+    #checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /************ shoppingbag *************/
       #checkout h1 {
         font-size: 1.6rem;
       }
@@ -1228,19 +1243,25 @@ footer #footer-sec-2 h4 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        width: 100%;
+        margin: 0.5rem 0;
+        
+        width: 85%;
 
         border: 1px solid var(--light-grey);
         }
 
         #checkout h2 {
-            text-align: center;
             font-size: 1.5rem;
+            margin: 0 auto;
+            width: 70%;
+            padding-bottom: 1.5rem;
         }
 
         #checkout h3 {
             margin-bottom: 0;
+            width: 70%;
+            /* margin: 0 auto; */
+            padding-bottom: 0.5rem;
         }
 
         /* litt smalere vidde på innholdet på checkout.html*/
@@ -1254,6 +1275,8 @@ footer #footer-sec-2 h4 {
         justify-content: space-evenly;
         align-items: flex-start;
         height: auto;
+
+        width: 70%;
 
         padding: 0;
         margin: 0.5rem 1rem;
@@ -1295,12 +1318,14 @@ footer #footer-sec-2 h4 {
         color: var(--black);
     }
 
-      /*dine opplysninger*/
+      /********* dine opplysninger **********/
 
       .form-information {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+
+        width: 70%;
     }
 
     .form-rows {
@@ -1322,38 +1347,43 @@ footer #footer-sec-2 h4 {
             position: static;
         }
         
-        
+        .form-info-btn {
+            width: 70%;
+        }
 
         #form-info-abort {
             width: 100%;
             text-align: center;
         }
         
-        /* Levering */
-
-        #form-delivery {
-
-        }
+        /*********** Levering *********/
 
         .delivery-option {
-            margin: 1rem 0;
+            width: 70%;
+            margin: 1rem auto;
             position: relative;
         }
 
-        .delivery-option ul li i {
+        .delivery-icon {
             position: absolute;
-            top: 1rem;
+            top: 0;
             right: 1rem;
+        }
+
+        .delivery-option ul li:first-child {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--grey);
         }
         
 
-        /* Betaling */
+        /************* Betaling *************/
 
         #form-payment {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            width: 100%;
+            width: 70%;
             margin-top: 1rem;
         }
 
@@ -1363,5 +1393,17 @@ footer #footer-sec-2 h4 {
 
         .checkboxes label {
             font-weight: 400;
-         }
+        }
+
+        .checkboxes #price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .checkboxes p {
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+        }
 }

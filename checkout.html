@@ -177,7 +177,7 @@
         <section id="information">
             <h2 class="checkout-title">2. Dine opplysninger</h2>
 
-            <form class="form-information content-width-desktop">
+            <form class="form-information">
                 <p>Leveringsadresse</p>
                 <section class="form-rows">
                     <div class="form-row">
@@ -207,7 +207,7 @@
                     </div>
                 </section>
             </form>
-            <form class="form-information content-width-desktop">
+            <form class="form-information">
                 <p>Kontaktinformasjon</p>
                 <label for="epost">E-post</label>
                 <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
@@ -215,13 +215,13 @@
                 <label for="telefon">Telefon</label>
                 <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
             </form>
-            <button type="submit" class="form-info-btn content-width-desktop">Lagre</button>
+            <button type="submit" class="form-info-btn">Lagre</button>
             <a href="#" id="form-info-abort">Avbryt</a>
         </section>
 
         <section id="delivery">
             <h2 class="checkout-title">3. Levering</h2>
-            <form id="form-delivery content-width-desktop">
+            <form id="form-delivery">
                 <h3>Leveringsvalg</h3>
 
                 <section class="delivery-option">
@@ -229,7 +229,7 @@
                     <label for="ekspress-hjem">Ekspress hjemlevering</label>
                     <ul>
                         <li>3-4 virkedager</li>
-                        <li><span>59 kr</span><i class="fa-solid fa-truck"></i></li>
+                        <li class="delivery-icon"><span>59 kr</span><i class="fa-solid fa-truck"></i></li>
                         <li>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hje til deg før froksot
                             mandag til lørdag. *For leveringer til postnummer 4000-7999 er leveringstiden 2 virkedager
                             for postnummer 8000-9999 er leveringstiden 3 virkedager.</li>
@@ -243,7 +243,7 @@
                     <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
                     <ul>
                         <li>1-3 virkedager</li>
-                        <li><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
+                        <li class="delivery-icon"><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
                     </ul>
                 </section>
                 <br>
@@ -253,8 +253,8 @@
                     <label for="standard-hjemlevering">Standard hjemlevering</label>
                     <ul>
                         <li>5-8 virkedager</li>
-                        <li><span>Gratis</span><i class="fa-solid fa-box"></i></li>
-                        <li>Leveres hjem til deg før frokost mandag til lørdag innen 5-8 virkedager.</li>
+                        <li class="delivery-icon"><span>Gratis</span><i class="fa-solid fa-box"></i></li>
+                        <li>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 virkedager.</li>
                     </ul>
                 </section>
                 <br><br>
