@@ -128,13 +128,13 @@ nav .nav-icons li {
 }
 
 
-/****************************************/
-/********** GLOBAL footer ***************/
-/****************************************/
+/*********************************************************************************/
+/**************************** GLOBAL footer **************************************/
+/*********************************************************************************/
 
 footer {
     border-top: 1px solid var(--black);
-    margin: 0.5rem;
+    margin: 1rem 0.5rem;
     padding: 1rem 0;
     width: 100%;
 }
@@ -164,7 +164,7 @@ footer #footer-sec-2 h4 {
     margin: 1rem 0;
 }
 
-/* Kontakt, Snarveier & Sosiale medier */
+/************* Kontakt, Snarveier & Sosiale medier *********************/
 
 #contact-index,
 #shortcuts,
@@ -305,7 +305,7 @@ footer #footer-sec-2 h4 {
     font-size: 0.8rem;
 }
 
-/* Produktkort & Kategorikort */
+/*************** Produktkort & Kategorikort *************************/
 
 #pop-products,
 #pop-category {
@@ -314,7 +314,8 @@ footer #footer-sec-2 h4 {
 }
 
 #pop-products h2,
-#pop-category h2 {
+#pop-category h2,
+#revirews h2 {
     padding: 1rem;
     margin: 1rem 0;
     font-size: 1.6rem;
@@ -326,7 +327,7 @@ footer #footer-sec-2 h4 {
     text-align: center;
 }
 
-/* Produktkort */
+/************************** Produktkort ************************/
 
 .pop-btns {
     display: flex;
@@ -334,6 +335,7 @@ footer #footer-sec-2 h4 {
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+    gap: 1rem;
 }
 
 .pop-btn {
@@ -352,6 +354,10 @@ footer #footer-sec-2 h4 {
 
 #product-cards {
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #product-cards a {
@@ -360,14 +366,15 @@ footer #footer-sec-2 h4 {
 }
 
 .product-card {
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 2rem;
+    max-width: 350px;
 }
 
 .product-card picture,
 .product-card img {
     width: 100%;
-    max-width: 400px;
+    min-width: 250px;
     border-radius: 20px;
     height: auto;
 }
@@ -416,15 +423,22 @@ footer #footer-sec-2 h4 {
 }
 
 
-/* Kategoritkort */
+/***************************** Kategoritkort **************************/
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .category-card {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
-    height: 300px;
     border-radius: 20px;
     margin-top: 1rem;
 
@@ -437,6 +451,16 @@ footer #footer-sec-2 h4 {
     overflow: hidden;
 }
 
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+}
+
 .category-card::before {
     content: "";
     position: absolute;
@@ -447,7 +471,7 @@ footer #footer-sec-2 h4 {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    filter: blur(3px);
+    opacity: 0.8;
     z-index: 1;
 }
 
@@ -459,28 +483,37 @@ footer #footer-sec-2 h4 {
 }
 
 .card1::before  {
-    background-image: url('/bilder/1.jpg'); /* Endre sti til bildet */
+    background-image: url('/bilder/1.jpg'); 
 }
+
 .card2::before  {
-    background-image: url('/bilder/2.jpg'); /* Endre sti til bildet */
+    background-image: url('/bilder/2.jpg'); 
 }
 
 .card3::before  {
-    background-image: url('/bilder/3.jpg'); /* Endre sti til bildet */
+    background-image: url('/bilder/3.jpg');
 }
 
 .card4::before  {
-    background-image: url('/bilder/4.jpg'); /* Endre sti til bildet */
+    background-image: url('/bilder/4.jpg'); 
 }
+
 .card5::before  {
-    background-image: url('/bilder/5.jpg'); /* Endre sti til bildet */
+    background-image: url('/bilder/5.jpg'); 
 }
+/*
+Kilde til bilder:
+https://pixabay.com/photos/women-lavender-nature-guadalajara-7341444/
+https://pixabay.com/photos/cabinet-clothes-garments-wardrobe-1853504/
+https://pixabay.com/photos/girl-model-dark-storytelling-7231594/
+https://pixabay.com/photos/woman-girl-shadow-old-iran-dark-8380758/
+https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
+*/
 
 
-/* Anmeldelser */
+/******************************* Anmeldelser ************************/
 
 #reviews {
-    width: 100%;
     max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
     padding: 1rem;
 }
@@ -490,7 +523,8 @@ footer #footer-sec-2 h4 {
 }
 
 .review-card {
-    width: 70%;
+    width: 100%;
+    max-width: 300px;
     padding: 1rem;
     margin: 1rem 0;
     border: 1px solid var(--light-grey);
@@ -518,6 +552,9 @@ footer #footer-sec-2 h4 {
     margin-bottom: 0.5rem;
 }
 
+.review-card p {
+    margin-top: 0.5rem;
+}
 
 /* Side scroll */
 
@@ -533,7 +570,7 @@ footer #footer-sec-2 h4 {
 }
 
 /*********************************************************************************/
-/*************************** Produkt product.html*********************************/
+/*************************** Produktside product.html*********************************/
 /*********************************************************************************/
 
 #product-section, 
@@ -582,7 +619,8 @@ footer #footer-sec-2 h4 {
     display: grid;
     grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    max-width: 800px;
+    max-width: 500px;
+    height: auto;
 }
 
 .product-image {
@@ -592,6 +630,7 @@ footer #footer-sec-2 h4 {
 .product-image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .prod1 {
@@ -663,6 +702,7 @@ footer #footer-sec-2 h4 {
     width: 100%;
     max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .similar-arrow {
@@ -747,6 +787,8 @@ footer #footer-sec-2 h4 {
 .shoppingbag-item {
     width: 100%;
     height: calc(200px * 2, auto);
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     margin: 1rem 0;
 }
@@ -852,12 +894,12 @@ footer #footer-sec-2 h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .delivery-option {
     display: block;
     padding: 1rem;
+    margin: 1rem 0;
     border: 1px solid var(--light-grey);
 }
 .delivery-option input[type="radio"] {
@@ -909,19 +951,28 @@ footer #footer-sec-2 h4 {
 }
 
 .checkboxes {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .checkboxes #price {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0;
+    align-self: center;
 }
 
-.checkboxes p {
+.checkboxes h3 {
     font-size: 1rem;
     font-weight: 400;
     margin: 1rem 0;
+    align-self: center;
+}
+
+.checkboxes p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    align-self: center;
 }
 
 .checkboxes label {
@@ -929,9 +980,135 @@ footer #footer-sec-2 h4 {
     font-weight: 600;
 }
 
+/*********************************************************************************/
+/***************************** MEDIA QUERIES: TABLET *****************************/
+/*********************************************************************************/
+
+@media only screen and (min-width: 768px){
+
+    /* Global header */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        margin: 1rem 0;
+    }
+    /* Footer*/
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    footer #footer-sec-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 3rem;
+    }
+
+    #contact-index {
+        width: 50%;
+    }
+
+    #contact-index ul li,
+    #shortcuts ul li {
+    font-size: 1rem;
+    }
+
+    #footer-sec-2 h4 {
+        font-size: 1.2rem;
+    }
+
+    /******************** Forside *************************/
+    .banner-image {
+        min-height: 400px;
+    }
+
+    .pop-btns {
+        margin: 1rem 0;
+    }
+
+    .product-card picture,
+    .product-card img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .card3 {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+
+    #reviews {
+        max-width: 800px;
+    }
+
+    .review-card p {
+        margin
+    }
+
+     /******************** Produktside product *************************/
+
+     .product-images {
+        max-width: 800px;
+     }
+
+     .product-info {
+        padding: 0 2rem;
+     }
+
+     #similar-product {
+        max-width: 800px;
+        gap: 1rem;
+    }
+
+    #similar-product h2 {
+        font-size: 1.2rem;
+    }
+
+    .similar-arrow a {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /******************** Kasseside checkout *************************/
+
+    .shoppingbag-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .delivery-option {
+        width: 100%;
+        margin: 1rem 0;
+        position: relative;
+    }
+
+    .delivery-icon {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+    }
+}
+
 
 /*********************************************************************************/
-/***************************** MEDIA QUERIES DESKTOP *****************************/
+/***************************** MEDIA QUERIES: DESKTOP *****************************/
 /*********************************************************************************/
 
 @media screen and (min-width: 1025px) {
@@ -942,10 +1119,8 @@ footer #footer-sec-2 h4 {
     /************ GLOBAL header *************/
 
     header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
+        margin: 0;
     }
 
     nav {
@@ -954,40 +1129,32 @@ footer #footer-sec-2 h4 {
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        padding: 1rem;
+        gap: 3rem;
     }
 
     nav ul {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    nav .nav-icons li {
+        margin: 0.5rem;
     }
 
     .search-container {
         margin: 0;
+        width: 350px;
     }
 
     /********** GLOBAL footer ***************/
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        margin: 1rem;
-        width: 85%;
-        margin: 0 auto;
-    }
-
     #footer-sec-1 h3 {
         margin-top: 2rem;
-    }
-
-    footer #footer-sec-2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        gap: 3rem;
     }
 
     #contact-index,
@@ -1000,13 +1167,8 @@ footer #footer-sec-2 h4 {
         margin: 0;
     }
 
-   
-
     /************************************** Forside ***************************************/
-
     /********** Banner ***************/
-
-
      .banner-image {
         display: flex;
         flex-direction: column;
@@ -1032,7 +1194,24 @@ footer #footer-sec-2 h4 {
     }
 
 
-    /************************ product cards *******************/
+    /************************ produktkort *******************/
+
+    #pop-products,
+    #pop-category {
+        margin-top: 2rem;
+    }
+
+
+    #pop-products h2,
+    #pop-category h2 {
+    font-size: 2rem;
+    }
+
+    #pop-products p,
+    #pop-category p {
+    text-align: center;
+    margin: 1rem 0;
+    }
 
     #product-cards {
         width: 100%;
@@ -1042,8 +1221,9 @@ footer #footer-sec-2 h4 {
     }
 
     .pop-btns {
-        width: 50%;
+        width: 40%;
         margin: 0 auto;
+        padding: 0;
         justify-content: space-evenly;
     }
 
@@ -1059,18 +1239,18 @@ footer #footer-sec-2 h4 {
     }
 
     .product-card {
-        max-width: 800px;
+        max-width: 400px;
         margin: 0 1rem;
     }
 
-    /*kategorier*/
+    /************* kategorier *****************/
 
    .categories {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 300px 1fr;
         padding: 0.1rem;
-        gap: 0.1rem;
+        gap: 0.5rem;
         width: 100%;
         height: auto;
    }
@@ -1080,6 +1260,22 @@ footer #footer-sec-2 h4 {
     }
 
     .card1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .card2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .card3 {
+        grid-column: 3;
+        grid-row: 1/3;
+    }
+    .card4 {
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
+   /*  .card1 {
         flex: 1 1 386px;
         max-width: 386px;
         grid-column: 1;
@@ -1113,12 +1309,15 @@ footer #footer-sec-2 h4 {
         grid-row: 2;
         justify-self: right;
     }
-
-    /* Anmeldelser */
+ */
+    /******************* Anmeldelser ************/
 
     #reviews {
         max-width: 1200px;
-      
+    }
+
+    #reviews h2 {
+        font-size: 2rem;
     }
 
     .review-card {
@@ -1142,22 +1341,22 @@ footer #footer-sec-2 h4 {
 /***************************************** Produkt *************************************/
 
 #product-section {
-    width: 85%;
     margin: 0 auto;
 }
 
-     .products {
-        display: flex;
-        flex-direction: row;
-        padding: 1rem;
-        margin: 0 auto;
-     }
-    
-     .product-info {
-        width: 50%;
-     }
 
-     /* lignende produkter*/
+.products {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 0 auto;
+}
+    
+.product-info {
+    width: 50%;
+    }
+
+/* lignende produkter*/
 
      #similar-product h2 {
         font-size: 1.5rem;
@@ -1166,7 +1365,6 @@ footer #footer-sec-2 h4 {
      }
 
      #similar-product {
-        width: 85%;
         margin: 0 auto;
         max-width: 1200px;
         padding: 0;
@@ -1207,8 +1405,7 @@ footer #footer-sec-2 h4 {
         justify-content: center;
         align-items: center;
         margin: 0.5rem 0;
-        
-        width: 85%;
+        width: 100%;
 
         border: 1px solid var(--light-grey);
         }
@@ -1351,7 +1548,8 @@ footer #footer-sec-2 h4 {
         }
 
         .checkboxes {
-           text-align: center;
+           justify-content: center;
+            align-items: center;
         }
 
         .checkboxes label {
@@ -1367,6 +1565,11 @@ footer #footer-sec-2 h4 {
         .checkboxes p {
             width: 70%;
             margin: 0 auto;
-            padding-bottom: 1rem;
+            padding: 1rem 0;
+        }
+
+        .checkboxes #price,
+        .checkboxes h3 {
+            text-align: center;
         }
 }
