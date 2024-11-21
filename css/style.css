@@ -134,13 +134,14 @@ nav .nav-icons li {
 
 footer {
     border-top: 1px solid var(--black);
-    margin: 1rem 0;
-    padding: 1rem;
-    width: var(--calc-responsive-width);
+    margin: 0.5rem;
+    padding: 1rem 0;
+    width: 100%;
 }
 
 footer section {
     margin: 1rem 0;
+    padding: 0.5rem;
 }
 
 footer #footer-sec-1 a {
@@ -173,7 +174,11 @@ footer #footer-sec-2 h4 {
 #contact-index,
 #shortcuts,
 #social-media {
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+#shortcuts {
+    width: 30%;
 }
 
 #contact-index ul,
@@ -187,11 +192,11 @@ footer #footer-sec-2 h4 {
 #social-media ul li a i {
     margin: 0.5rem;
     color: var(--black);
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 #contact-index ul li,
 #shortcuts ul li {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 #shortcuts ul li a,
@@ -202,7 +207,11 @@ footer #footer-sec-2 h4 {
 
 /* Kontakt */
 #contact-index {
-    width: 50%;
+    width: 60%;
+}
+
+#contact-index li span {
+    font-weight: 600;   
 }
 
 /* Snarveier */
