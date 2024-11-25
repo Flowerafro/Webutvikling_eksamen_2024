@@ -52,7 +52,7 @@
             <!-- 4 bilder -->
 
             <section class="products">
-                <div class="product-images">
+                <section class="product-images">
                     <picture class="product-image prod1">
                         <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                         <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
@@ -67,46 +67,212 @@
                         <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                     </picture>
 
-                    <picture class=" product-image prod3">
+                    <picture class="product-image prod3">
                         <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                         <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
                         <img src="bilder/dress.jpg" alt="Blå og hvit sommerkjole">
                         <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                     </picture>
 
-                    <picture class=" product-image prod4">
+                    <picture class="product-image prod4">
                         <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                         <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
                         <img src="bilder/dress.jpg" alt="Blå og hvit sommerkjole">
                         <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                     </picture>
-                </div>
+                </section>
 
-                <article class=" product-info">
-                    <h2>Produktnavn</h2>
-                    <a href="#">MERKENAVN</a>
-                    <p>5 000kr inkl. mva</p>
-                    <p>FARGE: <span>Beige</span></p>
+                <section class="product-info-section">
+                    <article class="product-info">
+                        <h2>Produktnavn</h2>
+                        <a href="#">MERKENAVN</a>
+                        <p>5 000kr inkl. mva</p>
+                        <p>FARGE: <span>Beige</span></p>
 
-                    <label for="size">
-                    </label>
-                    <select name="size" id="size">
-                        <option>Velg størrelse: </option>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <div class="product-btns">
-                        <button type="submit" class="black-btn prod-btn">Legg i handlekurv</button>
-                        <button class="white-btn"><i class="fa-regular fa-heart"></i></button>
-                    </div>
+                        <label for="size">
+                        </label>
+                        <select name="size" id="size">
+                            <option>Velg størrelse: </option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <div class="product-btns">
+                            <button type="submit" class="black-btn prod-btn">Legg i handlekurv</button>
+                            <button class="white-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </article>
 
+                    <section class="details-section">
+                        <details>
+                            <summary>Materiale og vedlikehold <i class="fa-solid fa-plus detail-icon"></i></summary>
+                            <ul>
+                                <li>Overmateriale: 95% viskose, 5% elastan</li>
+                                <li>Materiale ermer: 100% polyester</li>
+                                <li>Materiale: Jersey</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Produktdetaljer <i class="fa-solid fa-plus detail-icon"></i></summary>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto explicabo
+                                quisquam nulla iusto! Molestias repudiandae accusantium obcaecati modi placeat!</p>
+                        </details>
+                        <details>
+                            <summary>Størrelsestabell<i class="fa-solid fa-plus detail-icon"></i></summary>
 
-                </article>
+                            <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår
+                                størrelsesguide.
+                                Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke
+                                og
+                                modell
+                            </p>
+                            <table>
+                                <tr>
+                                    <th>EU</th>
+                                    <th>INT</th>
+                                    <th>BRYSTVIDDE</th>
+                                    <th>LIVVIDDE</th>
+                                    <th>HOFTEMÅL</th>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <td>XXS</td>
+                                    <td>76</td>
+                                    <td>63</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>XS</td>
+                                    <td>80</td>
+                                    <td>66</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>S</td>
+                                    <td>84</td>
+                                    <td>69</td>
+                                    <td>93</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>M</td>
+                                    <td>88</td>
+                                    <td>72</td>
+                                    <td>97</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>L</td>
+                                    <td>92</td>
+                                    <td>76</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>XL</td>
+                                    <td>96</td>
+                                    <td>80</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>XXL</td>
+                                    <td>100</td>
+                                    <td>85</td>
+                                    <td>106</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>3XL</td>
+                                    <td>104</td>
+                                    <td>90</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>4XL</td>
+                                    <td>110</td>
+                                    <td>96.5</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>5XL</td>
+                                    <td>116</td>
+                                    <td>103</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>6XL</td>
+                                    <td>122</td>
+                                    <td>109.5</td>
+                                    <td>124</td>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <td>7XL</td>
+                                    <td>128</td>
+                                    <td>116</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>56</td>
+                                    <td>8XL</td>
+                                    <td>134</td>
+                                    <td>122.5</td>
+                                    <td>136</td>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <td>9XL</td>
+                                    <td>140</td>
+                                    <td>129</td>
+                                    <td>142</td>
+                                </tr>
+                                <tr>
+                                    <td>60</td>
+                                    <td>10XL</td>
+                                    <td>146</td>
+                                    <td>135.5</td>
+                                    <td>148</td>
+                                </tr>
+                            </table>
+                        </details>
+
+                        <div class="details-container">
+                            <ul class="details-title-icon">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>32</li>
+                            </ul>
+                            <details class="details-review">
+                                <summary> Anmeldelser </summary>
+                                <article class="details-review-card">
+                                    <h5>Navn Navnesen</h5>
+                                    <p>2024-10-02</p>
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem cumque a excepturi
+                                        officiis ex sit.</p>
+                                </article>
+                            </details>
+                        </div>
+                    </section>
+                </section>
             </section>
-
         </section>
 
         <!-- minimum 4 produktkort tilsvarende de som brukes på forsiden under seksjonen "de mest populære" -->
@@ -120,6 +286,7 @@
             <section class="similar-products">
                 <a href="product.html">
                     <article class="product-card similar-scroll-child">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
@@ -144,6 +311,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
@@ -168,6 +336,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
@@ -192,6 +361,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
@@ -215,6 +385,7 @@
                 </a>
                 <a href="product.html">
                     <article class="product-card">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">
@@ -238,6 +409,7 @@
                 </a>
                 <a href="product.html">
                     <article class="product-card">
+                        <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(max-width: 300px)" srcset="https://picsum.photos/300/300">
                             <source media="(max-width: 400px)" srcset="https://picsum.photos/400/400">

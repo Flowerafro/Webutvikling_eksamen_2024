@@ -9,6 +9,7 @@
     --grey: #808080;
     --dark-grey: #333;
     --black: #000;
+    --peach: #FFA7A6;
 
     --font-banner-title: clamp(1.2rem, 2.5vw, 2rem);
     --font-banner-text: clamp(0.9rem, 2.5vw, 1.5rem);
@@ -124,6 +125,7 @@ nav .nav-icons {
     flex-direction: row;
     padding: 0; 
     margin: 0;
+    curosr: pointer;
 }
 
 nav .nav-icons li {
@@ -141,6 +143,10 @@ footer {
     margin: 1rem 0.5rem;
     padding: 1rem 0;
     width: 100%;
+}
+
+footer #footer-sec-1 {
+   margin-top: 1rem;
 }
 
 footer #footer-sec-1 a {
@@ -307,6 +313,7 @@ footer #footer-sec-2 h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .banner-btn-light {
@@ -360,6 +367,7 @@ footer #footer-sec-2 h4 {
     font-size: 0.7rem;
     padding: 1rem;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .pop-btn.active {
@@ -384,6 +392,18 @@ footer #footer-sec-2 h4 {
     /* width: 100%; */
     margin-bottom: 2rem;
     max-width: 350px;
+    position: relative;
+}
+
+.product-card-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: var(--light-grey);
+    color: var(--white);
+    border-radius: 50%;
 }
 
 .product-card picture,
@@ -623,7 +643,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     font-weight: bold;
 }
 
-/* Produkt */
+/******************* Produkt ********************/
 
 .products {
     display: flex;
@@ -665,6 +685,11 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     grid-column: 2 / 3;
 }
 
+.product-info-section {
+    display: flex;
+    flex-direction: column;
+}
+
 .product-info {
     margin-top: 1rem;
     padding: 1rem;
@@ -683,8 +708,13 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .product-info select {
     padding: 0.5rem;
+    cursor: pointer;
     border: 1px solid var(--light-grey);
     border-radius: 5px;
+}
+
+.product-info select:focus {
+    border: 1px solid var(--dark-grey);
 }
 
 .product-btns {
@@ -695,11 +725,150 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     gap: 1rem;
 }
 
+.product-btns button {
+    cursor: pointer;
+}
+
 .prod-btn {
     width: 100%;
 }
 
-/* lignende produkter*/
+/**************************** Details **************************/
+
+.details-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.details-section details {
+    padding: 1rem;
+    border-top: 1px solid var(--dark-grey);
+}
+
+.detail-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.details-section summary {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.details-section ul {
+    padding: 1rem 2rem;
+}
+
+.details-section ul li {
+    font-size: 0.9rem;
+}
+
+.details-section p {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+/* Size chart */
+
+.details-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-section table {
+    font-size: 0.8rem;
+}
+
+.details-section table th {
+    font-weight: 600;
+    text-align: left;
+}
+
+.details-section table td {
+    padding-bottom: 0.rem;
+}
+
+/* Details Anmeldelser */
+
+.details-container {
+    position: relative;
+}
+
+.details-title-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    list-style: none;
+    right: 0;
+    top: 30px;
+    z-index: 100;
+    padding:0;
+    margin:0;
+}
+
+.details-review {
+    position: relative;
+    margin-top: 2rem; /* Adjust as needed to avoid overlap */
+}
+
+.details-review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem 0;
+    border: 1px solid var(--light-grey);
+    border-radius: 30px;
+    max-width: 500px;
+}
+
+.details-review-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    margin:0;
+}
+
+/* .details-review {
+    position: relative;
+}
+
+.details-title-icon {
+    display: flex;
+    position: absolute;
+    list-style: none;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.details-review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem 0;
+    border: 1px solid var(--light-grey);
+    border-radius: 30px;
+
+    max-width: 500px;
+}
+
+.details-review-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding:0;
+} */
+
+
+/********************** lignende produkter *********************/
 
 #similar-product {
     padding: 1rem;
@@ -731,7 +900,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .similar-arrow a {
     margin-right: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .similar-products a {
@@ -762,9 +931,15 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     padding: 1rem;
 }
 
+.fortsetthandle {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
 #checkout h1 {
-    margin: 1rem 0;
-    font-size: 2rem;
+    margin: 2rem 0;
+    font-size: calc(var(--font-banner-title) + 0.2rem);
     text-align: center;
 }
 
@@ -1058,7 +1233,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         height: auto;
     }
 
-
     .categories {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -1081,13 +1255,20 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
      .product-images {
         max-width: 800px;
+        padding: 1rem;
      }
 
      .product-info {
         padding: 0 2rem;
-     }
+    }
 
-     #similar-product {
+    .details-section {
+        padding: 2rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #similar-product {
         max-width: 800px;
         gap: 1rem;
     }
@@ -1287,6 +1468,11 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         gap: 1rem;
     }
 
+    .product-card-icon:hover {
+        background-color: var(--peach);
+        transition: 0.5s;
+    }
+
     .pop-btns {
         width: 40%;
         margin: 0 auto;
@@ -1342,41 +1528,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         grid-column: 1/3;
         grid-row: 2/4;
     }
-   /*  .card1 {
-        flex: 1 1 386px;
-        max-width: 386px;
-        grid-column: 1;
-    }
-
-    .card2 {
-        flex: 1 1 386px;
-        max-width: 386px;
-        grid-column: 2 / 3;
-    }
-
-    .card3 {
-        flex: 1 1 386px;
-        max-width: 386px;
-        grid-column: 3 /5;
-    }
-
-    .card4 {
-        flex: 1 1 864px;
-        max-width: 864px;
-        grid-column: 1 / 3;
-        grid-row: 2;
-        margin-right: -86px;
-        justify-self: stretch;
-    }
-    .card5 {
-        flex: 1 1 300px;
-        max-width: 300px;
-        width: 100%;
-        grid-column: 3 / 4;
-        grid-row: 2;
-        justify-self: right;
-    }
- */
+   
     /******************* Anmeldelser ************/
 
     #reviews {
@@ -1411,19 +1563,58 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     margin: 0 auto;
 }
 
-
 .products {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    align-items: center;
+    padding: 0;
     margin: 0 auto;
 }
-    
-.product-info {
-    width: 50%;
-    }
 
-/* lignende produkter*/
+.product-images {
+    width: 60%;
+}
+
+.product-info-section {
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.product-info {
+    padding:0;
+}
+
+.product-info select:hover {
+    border: 1px solid var(--dark-grey);
+}
+
+.black-btn:hover {
+    background-color: var(--light-grey);
+    transition: 0.5s ease-in-out;
+}
+
+.white-btn:hover {
+    background-color: var(--peach);
+    color: var(--white);
+    border: 1px solid var(--peach);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.details-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+/****************** lignende produkter ********************/
 
      #similar-product h2 {
         font-size: 1.5rem;
