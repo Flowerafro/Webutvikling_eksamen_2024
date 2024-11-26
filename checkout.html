@@ -20,8 +20,9 @@
     <header>
         <nav>
             <form class="search-container">
+                <label for="search-bar">søk her</label>
                 <input type="text" id="search-bar" placeholder="Søk her">
-                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-search search-icon" aria-label="Søk"></i>
             </form>
             <ul class="nav-links">
                 <li><a href="index.html">Hjem</a></li>
@@ -32,9 +33,10 @@
 
             </ul>
             <ul class="nav-icons">
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><i class="fa-regular fa-heart"></i></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><i class="fa-regular fa-user" aria-label="brukerknapp"></i></li>
+                <li><i class="fa-regular fa-heart" aria-label="Favorittknapp"></i></li>
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Handlekurvknapp"></i></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -45,12 +47,11 @@
         <section id="shopping-bag">
             <h2 class="checkout-title">1. Shoppingbagen din</h2>
 
-            <!-- Legg til flere bag items -->
             <article class="shoppingbag-item">
                 <picture>
                     <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                     <source media="(max-width: 600px)" srcset="bilder/dress.jpg">
-                    <img src="bilder/dress.jpg" alt="populært produkt nr.1">
+                    <img src="bilder/dress.jpg" alt="Produktbilde: Kvinnelig modell i blå og hvit sommerkjole">
                     <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                 </picture>
                 <article class="shoppingbag-info">
@@ -83,7 +84,7 @@
                 <picture>
                     <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                     <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
-                    <img src="bilder/dress.jpg" alt="populært produkt nr.1">
+                    <img src="bilder/dress.jpg" alt="Produktbilde: Kvinnelig modell i blå og hvit sommerkjole">
                     <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                 </picture>
                 <article class="shoppingbag-info">
@@ -116,7 +117,7 @@
                 <picture>
                     <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                     <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
-                    <img src="bilder/dress.jpg" alt="populært produkt nr.1">
+                    <img src="bilder/dress.jpg" alt="Produktbilde: Kvinnelig modell i blå og hvit sommerkjole">
                     <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                 </picture>
                 <article class="shoppingbag-info">
@@ -149,7 +150,7 @@
                 <picture>
                     <source media="(max-width: 300px)" srcset="bilder/dress.jpg">
                     <source media="(max-width: 400px)" srcset="bilder/dress.jpg">
-                    <img src="bilder/dress.jpg" alt="populært produkt nr.1">
+                    <img src="bilder/dress.jpg" alt="Produktbilde: Kvinnelig modell i blå og hvit sommerkjole">
                     <!-- Kilde: https://pixabay.com/photos/woman-model-dress-elegant-female-6115105/  -->
                 </picture>
                 <article class="shoppingbag-info">
@@ -181,9 +182,24 @@
 
         <section id="information">
             <h2 class="checkout-title">2. Dine opplysninger</h2>
-
             <form class="form-information">
-                <p>Leveringsadresse</p>
+                <fieldset>
+                    <legend>Leveringsadresse</legend>
+                    <label for="fname">Fornavn</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Fornavn*">
+                    <label for="lname">Etternavn</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Etternavn*">
+                    <label for="gateadresse">Gateadresse</label>
+                    <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
+                    <label for="postnummer">Postnummer</label>
+                    <input type="number" id="postnummer" name="postnummer" min="0" max="9999" placeholder="Postnummer*">
+                    <label for="poststed">Poststed</label>
+                    <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
+                </fieldset>
+
+
+
+                <!-- <h3>Leveringsadresse</h3>
                 <section class="form-rows">
                     <div class="form-row">
                         <label for="fname">Fornavn</label>
@@ -194,7 +210,7 @@
                         <label for="lname">Etternavn</label>
                         <input type="text" id="lname" name="lastname" placeholder="Etternavn*">
                     </div>
-                </section>
+                </section> 
 
                 <label for="gateadresse">Gateadresse</label>
                 <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
@@ -210,15 +226,25 @@
                         <label for="poststed">Poststed</label>
                         <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
                     </div>
-                </section>
+                </section> -->
             </form>
+
             <form class="form-information">
-                <p>Kontaktinformasjon</p>
+
+                <fieldset>
+                    <legend>Kontaktinformasjon</legend>
+                    <label for="epost">E-post</label>
+                    <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
+
+                    <label for="telefon">Telefon</label>
+                    <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
+                </fieldset>
+                <!--     <h3>Kontaktinformasjon</h3>
                 <label for="epost">E-post</label>
                 <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
 
                 <label for="telefon">Telefon</label>
-                <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
+                <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 "> -->
             </form>
             <button type="submit" class="form-info-btn">Lagre</button>
             <a href="#" id="form-info-abort">Avbryt</a>
@@ -228,7 +254,20 @@
             <h2 class="checkout-title">3. Levering</h2>
             <form id="form-delivery">
                 <h3>Leveringsvalg</h3>
+                <fieldset class="delivery-option">
+                    <!-- <legend>Leveringsvalg</legend> -->
+                    <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
+                    <label for="ekspress-hjem">Ekspress hjemlevering</label>
+                    <ul>
+                        <li>3-4 virkedager</li>
+                        <li class="delivery-icon"><span>59 kr</span><i class="fa-solid fa-truck"></i></li>
+                        <li>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hje til deg før froksot
+                            mandag til lørdag. *For leveringer til postnummer 4000-7999 er leveringstiden 2 virkedager
+                            for postnummer 8000-9999 er leveringstiden 3 virkedager.</li>
+                    </ul>
+                </fieldset>
 
+                <!--  <h3>Leveringsvalg</h3>
                 <section class="delivery-option">
                     <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
                     <label for="ekspress-hjem">Ekspress hjemlevering</label>
@@ -240,9 +279,19 @@
                             for postnummer 8000-9999 er leveringstiden 3 virkedager.</li>
                     </ul>
                 </section>
-                <br>
+                <br> -->
 
-                <section class="delivery-option">
+                <fieldset class="delivery-option">
+                    <input type="radio" id="ekspress-utleveringssted" name="levering"
+                        value="Ekspress pakke til utleveringssted">
+                    <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
+                    <ul>
+                        <li>1-3 virkedager</li>
+                        <li class="delivery-icon"><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
+                    </ul>
+                </fieldset>
+
+                <!--    <section class="delivery-option">
                     <input type="radio" id="ekspress-utleveringssted" name="levering"
                         value="Ekspress pakke til utleveringssted">
                     <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
@@ -251,9 +300,19 @@
                         <li class="delivery-icon"><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
                     </ul>
                 </section>
-                <br>
+                <br> -->
 
-                <section class="delivery-option">
+                <fieldset class="delivery-option">
+                    <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
+                    <label for="standard-hjemlevering">Standard hjemlevering</label>
+                    <ul>
+                        <li>5-8 virkedager</li>
+                        <li class="delivery-icon"><span>Gratis</span><i class="fa-solid fa-box"></i></li>
+                        <li>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 virkedager.</li>
+                    </ul>
+                </fieldset>
+
+                <!-- <section class="delivery-option">
                     <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
                     <label for="standard-hjemlevering">Standard hjemlevering</label>
                     <ul>
@@ -262,7 +321,7 @@
                         <li>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 virkedager.</li>
                     </ul>
                 </section>
-                <br><br>
+                <br><br> -->
             </form>
         </section>
 

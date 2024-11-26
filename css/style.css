@@ -68,6 +68,10 @@ header {
     position: relative;
 }
 
+.search-container label {
+    display: none;
+}
+
 #search-bar {
     width: 100%;
     padding: 0.8rem; 
@@ -953,7 +957,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     margin: 1rem;
   }
 
-  .shoppingbag-info h3 {
+.shoppingbag-info h3 {
     margin-top: 1rem;
     text-transform: uppercase;
     font-weight: 800;
@@ -1003,14 +1007,24 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     margin-top: 2rem;
 }
 
-.form-information p {
+.form-information fieldset {
+    border: none;
+}
+
+.form-information legend {
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+/* .form-information p {
     font-size: 0.9rem;
     font-weight: bold;
     margin-top: 1rem;
-}
+} */
 
 .form-information label {
    color: var(--dark-grey);
+   font-weight: 600;
    font-size: 0.9rem;
 }
 
@@ -1047,11 +1061,15 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 
 .delivery-option {
-    display: block;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 1rem;
     border: 1px solid var(--light-grey);
 }
+
+.delivery-option legend {
+    margin-bottom: 1rem;
+}
+
 .delivery-option input[type="radio"] {
     margin-right: 0.5rem;
 }
