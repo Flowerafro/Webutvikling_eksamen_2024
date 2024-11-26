@@ -842,17 +842,10 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     font-size: 1.1rem;
 }
 
-#similar-product {
-    width: 100%;
-    max-width: 400px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
 .similar-arrow {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     padding-left: 1rem;
     top: 0;
     right: 0;
@@ -873,12 +866,14 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
-    max-width: 100%;
+
+    width: 95vw;
 }
 
-/* side scroll similar products*/
+/* Horisontal scroll for similar products*/
 .similar-scroll-child {
     flex: 0 0 auto;
+    max-width: 300px;
 }
 
 /*********************************************************************************/
@@ -1242,7 +1237,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     #similar-product {
-        max-width: 800px;
+       /*  max-width: 800px; */
         gap: 1rem;
     }
 
@@ -1553,32 +1548,32 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .products {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     margin: 0 auto;
+    height: auto;
 }
 
 .product-images {
     width: 60%;
+
+    position: sticky;
+    top: 0;
 }
 
 .product-info-section {
-    width: 35%;
+    width: 30%;
     height: auto;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0;
 
     /*overflow-y fungerer ikke helt som jeg vil*/
-    max-height: 700px;
 }
 
 .details-section {
-    overflow: auto;
-    overflow-y: auto;
-   /*  max-height: 500px; */
-
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1626,7 +1621,9 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
      }
 
      .similar-products {
-        padding: 0 2rem;
+        max-width: 1200px;
+        padding: 0;
+        gap: 0;
      }
 
      .similar-arrow {
