@@ -1,6 +1,5 @@
 /* GLOBAL RULES */
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --white: #fff;
@@ -21,7 +20,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     max-width: 1200px;
 }
 
@@ -130,7 +129,6 @@ nav .nav-icons li {
     font-size: 1.2rem;
 }
 
-
 /*********************************************************************************/
 /**************************** GLOBAL footer **************************************/
 /*********************************************************************************/
@@ -167,7 +165,7 @@ footer #footer-sec-2 {
 
 footer #footer-sec-2 h4 {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 400;
     margin: 1rem 0;
 }
 
@@ -227,7 +225,6 @@ footer #footer-sec-2 h4 {
     flex-direction: row;
     gap: 0.2rem;
 }
-
 
 /*********************************************************************************/
 /*************************** FORSIDE index.html***********************************/
@@ -322,8 +319,6 @@ footer #footer-sec-2 h4 {
     display: none;
 }
 
-
-
 /*************** Produktkort & Kategorikort *************************/
 
 #pop-products,
@@ -386,7 +381,6 @@ footer #footer-sec-2 h4 {
 }
 
 .product-card {
-    /* width: 100%; */
     margin-bottom: 2rem;
     max-width: 350px;
     position: relative;
@@ -453,7 +447,6 @@ footer #footer-sec-2 h4 {
 .card-info2:last-child {
     font-weight: 600;
 }
-
 
 /***************************** Kategoritkort **************************/
 
@@ -542,11 +535,10 @@ https://pixabay.com/photos/woman-girl-shadow-old-iran-dark-8380758/
 https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 */
 
-
 /******************************* Anmeldelser ************************/
 
 #reviews {
-    max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
+    max-width: 400px; 
     padding: 1rem;
 }
 
@@ -814,7 +806,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .details-review {
     position: relative;
-    margin-top: 2rem; /* Adjust as needed to avoid overlap */
+    margin-top: 2rem; 
 }
 
 .details-review-card {
@@ -852,7 +844,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 #similar-product {
     width: 100%;
-    max-width: 400px; /* For at slideren skal fungere må den ha en fast bredde*/
+    max-width: 400px;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -889,7 +881,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     flex: 0 0 auto;
 }
 
-
 /*********************************************************************************/
 /*************************** Kasseside checkout.html *****************************/
 /*********************************************************************************/
@@ -919,7 +910,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         font-size: 1rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
-
 }
 
 #shopping-bag, 
@@ -929,7 +919,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     margin: 2rem 0;
     border: 1px solid var(--light-grey);
 }
@@ -968,7 +958,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     font-size: 1.2rem;
   }
 
-  .shoppingbag-info ul {
+.shoppingbag-info ul {
     list-style: none;
   }
 
@@ -1001,7 +991,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     margin-right: 1rem;
 }
 
-
 /*************** 2. Dine opplysninger ***************/
 
 .form-information {
@@ -1013,18 +1002,13 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .form-information fieldset {
     border: none;
+    margin-bottom: 1rem;
 }
 
 .form-information legend {
     font-weight: 600;
     padding-bottom: 0.5rem;
 }
-
-/* .form-information p {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-top: 1rem;
-} */
 
 .form-information label {
    color: var(--dark-grey);
@@ -1055,7 +1039,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     text-align: center;
 }
 
-
 /****************** 3. Levering ***************/
 
 #form-delivery {
@@ -1071,7 +1054,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 
 .delivery-option legend {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .delivery-option input[type="radio"] {
@@ -1100,7 +1083,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .delivery-option ul li span {
     margin-right: 0.5rem;
 }
-
 
 /******************* 4. Betaling ****************/
 
@@ -1148,14 +1130,19 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 
 .checkboxes p {
-    font-size: 0.9rem;
-    margin: 1rem 0;
+    font-size: 0.8rem;
+    margin: 1rem;
     align-self: center;
+    text-align: center;
 }
 
 .checkboxes label {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.checkboxes fieldset {
+    border: none;
+    text-align: center;
 }
 
 /*********************************************************************************/
@@ -1184,11 +1171,8 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     footer #footer-sec-2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         flex-wrap: nowrap;
-        gap: 3rem;
+        gap: 0;
     }
 
     #contact-index {
@@ -1241,6 +1225,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
      /******************** Produktside product *************************/
 
+
      .product-images {
         max-width: 800px;
         padding: 1rem;
@@ -1290,7 +1275,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 }
 
-
 /*********************************************************************************/
 /***************************** MEDIA QUERIES: DESKTOP *****************************/
 /*********************************************************************************/
@@ -1337,6 +1321,11 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
     /********** GLOBAL footer ***************/
 
+    footer {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
     #footer-sec-1 h3 {
         margin-top: 2rem;
     }
@@ -1344,11 +1333,25 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     #contact-index,
     #shortcuts,
     #social-media {
-        width: calc(100% / 3);
         display: flex;
         flex-direction: column;
-        padding-left: 1rem;
+        padding: 0;
         margin: 0;
+    }
+
+    #contact-index ul,
+    #shortcuts ul,
+    #social-media ul {
+        list-style: none;
+        margin-top: 0;
+    }
+
+    #social-media ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        gap: 0;
     }
 
     /************************************** Forside ***************************************/
@@ -1418,7 +1421,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
         z-index: 100;
     }
     .banner-slider-btn {
@@ -1429,14 +1431,12 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
        z-index: 101;
     }
 
-
     /************************ produktkort *******************/
 
     #pop-products,
     #pop-category {
         margin-top: 2rem;
     }
-
 
     #pop-products h2,
     #pop-category h2 {
@@ -1530,9 +1530,8 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     .review-card {
         width: 25%;
     }
-
    
-    /* Side scroll in desktop */
+/* Side scroll in desktop */
 
 .side-scroll-parent {
     display: flex;
@@ -1569,8 +1568,29 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 0;
+
+    /*overflow-y fungerer ikke helt som jeg vil*/
+    max-height: 700px;
 }
+
+.details-section {
+    overflow: auto;
+    overflow-y: auto;
+   /*  max-height: 500px; */
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.details-section details {
+    cursor: pointer;
+}
+
 
 .product-info {
     padding:0;
@@ -1590,17 +1610,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     transition: 0.5s ease-in-out;
 }
 
-.details-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    margin-top: 2rem;
-    position: relative;
-}
-
-
+   
 /****************** lignende produkter ********************/
 
      #similar-product h2 {
@@ -1633,7 +1643,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         display: flex;
         flex-direction: column;
         justify-content: center;
-       /*  align-items: center; */
+       padding: 2rem 0;
     }
 
     /************ shoppingbag *************/
@@ -1651,28 +1661,21 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         align-items: center;
         margin: 0.5rem 0;
         width: 100%;
-
         border: 1px solid var(--light-grey);
         }
 
         #checkout h2 {
             font-size: 1.5rem;
             margin: 0 auto;
-            width: 70%;
+            width: 60%;
             padding-bottom: 1.5rem;
         }
 
         #checkout h3 {
             margin-bottom: 0;
-            width: 70%;
-            /* margin: 0 auto; */
+            width: 60%;
             padding-bottom: 0.5rem;
         }
-
-        /* litt smalere vidde på innholdet på checkout.html*/
-        .content-width-desktop {
-            width: 55%;
-        } 
 
       .shoppingbag-item {
         display: flex;
@@ -1680,9 +1683,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         justify-content: space-evenly;
         align-items: flex-start;
         height: auto;
-
-        width: 70%;
-
+        width: 60%;
         padding: 0;
         margin: 0.5rem 1rem;
       }
@@ -1730,20 +1731,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         flex-direction: column;
         flex-wrap: wrap;
 
-        width: 70%;
-    }
-
-    .form-rows {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.5rem;
-     
-    }
-    .form-row {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        width: 60%;
     }
 
     .form-information label {
@@ -1757,7 +1745,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         }
         
         .form-info-btn {
-            width: 70%;
+            width: 60%;
         }
 
         #form-info-abort {
@@ -1772,7 +1760,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         }
 
         .delivery-option {
-            width: 70%;
+            width: 60%;
             margin: 1rem auto;
             position: relative;
         }
@@ -1788,7 +1776,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
             font-size: 0.9rem;
             color: var(--grey);
         }
-        
 
         /************* Betaling *************/
 
@@ -1796,7 +1783,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            width: 70%;
+            width: 60%;
             margin-top: 1rem;
         }
 
@@ -1816,7 +1803,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         }
 
         .checkboxes p {
-            width: 70%;
+            width: 60%;
             margin: 0 auto;
             padding: 1rem 0;
         }
