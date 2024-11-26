@@ -257,7 +257,7 @@ footer #footer-sec-2 h4 {
 .banner-img1 {
     background-image: url('/bilder/banner1.jpg');
 }
-/* Kilde: https://pixabay.com/photos/sunrise-jungle-valley-forest-1950873/ */
+/* Kilde: https://pixabay.com/photos/fall-fog-light-nature-stuttgart-7863868/ */
 .banner-img2 {
     background-image: url('/bilder/banner2.jpg');
     display: none;
@@ -268,7 +268,7 @@ footer #footer-sec-2 h4 {
     background-image: url('/bilder/banner3.jpg');
     display: none;
 }
-/* Kilde: https://pixabay.com/photos/aurora-borealis-lake-snow-aurora-5599375/*/
+/* Kilde: https://pixabay.com/photos/milkyway-stars-astrology-galaxy-8190232/ */
 
 .banner-title {
     color: var(--black);
@@ -701,6 +701,10 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .product-info span {
     font-weight: 600;
+}
+
+.product-info label {
+    display: none;
 }
 
 .product-info select {
@@ -1736,10 +1740,14 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         width: 100%;
     }
 
-        .form-information label {
-            margin: 0.5rem 0;
-            visibility: visible;
-            position: static;
+    .form-information label {
+        margin: 0.5rem 0;
+        visibility: visible;
+        position: static;
+    }
+
+        .form-information input:focus {
+            border: 1px solid var(--dark-grey);
         }
         
         .form-info-btn {
