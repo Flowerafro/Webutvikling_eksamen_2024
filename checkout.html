@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -14,15 +14,15 @@
     <title>Nettbutikk - kasseside</title>
 </head>
 
-<!-- DIV COUNT: 5 -->
+<!-- DIV COUNT: 0 -->
 
 <body class="grid-container">
     <header>
         <nav>
             <form class="search-container">
                 <label for="search-bar">søk her</label>
-                <input type="text" id="search-bar" placeholder="Søk her">
-                <i class="fas fa-search search-icon" aria-label="Søk"></i>
+                <input type="text" id="search-bar" placeholder="Søk her" aria-label="Søk">
+                <i class="fas fa-search search-icon"></i>
             </form>
             <ul class="nav-links">
                 <li><a href="index.html">Hjem</a></li>
@@ -33,9 +33,9 @@
 
             </ul>
             <ul class="nav-icons">
-                <li><i class="fa-regular fa-user" aria-label="brukerknapp"></i></li>
-                <li><i class="fa-regular fa-heart" aria-label="Favorittknapp"></i></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Handlekurvknapp"></i></a>
+                <li><i class="fa-regular fa-user"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul>
         </nav>
@@ -192,45 +192,14 @@
                     <label for="gateadresse">Gateadresse</label>
                     <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
                     <label for="postnummer">Postnummer</label>
-                    <input type="number" id="postnummer" name="postnummer" min="0" max="9999" placeholder="Postnummer*">
+                    <input type="number" id="postnummer" name="postnummer" min="0001" max="9998"
+                        placeholder="Postnummer*" required>
                     <label for="poststed">Poststed</label>
                     <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
                 </fieldset>
-
-
-
-                <!-- <h3>Leveringsadresse</h3>
-                <section class="form-rows">
-                    <div class="form-row">
-                        <label for="fname">Fornavn</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Fornavn*">
-                    </div>
-
-                    <div class="form-row">
-                        <label for="lname">Etternavn</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Etternavn*">
-                    </div>
-                </section> 
-
-                <label for="gateadresse">Gateadresse</label>
-                <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
-
-                <section class="form-rows">
-                    <div class="form-row">
-                        <label for="postnummer">Postnummer</label>
-                        <input type="number" id="postnummer" name="postnummer" min="0" max="9999"
-                            placeholder="Postnummer*">
-                    </div>
-
-                    <div class="form-row">
-                        <label for="poststed">Poststed</label>
-                        <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
-                    </div>
-                </section> -->
             </form>
 
             <form class="form-information">
-
                 <fieldset>
                     <legend>Kontaktinformasjon</legend>
                     <label for="epost">E-post</label>
@@ -239,12 +208,6 @@
                     <label for="telefon">Telefon</label>
                     <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
                 </fieldset>
-                <!--     <h3>Kontaktinformasjon</h3>
-                <label for="epost">E-post</label>
-                <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
-
-                <label for="telefon">Telefon</label>
-                <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 "> -->
             </form>
             <button type="submit" class="form-info-btn">Lagre</button>
             <a href="#" id="form-info-abort">Avbryt</a>
@@ -267,20 +230,6 @@
                     </ul>
                 </fieldset>
 
-                <!--  <h3>Leveringsvalg</h3>
-                <section class="delivery-option">
-                    <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
-                    <label for="ekspress-hjem">Ekspress hjemlevering</label>
-                    <ul>
-                        <li>3-4 virkedager</li>
-                        <li class="delivery-icon"><span>59 kr</span><i class="fa-solid fa-truck"></i></li>
-                        <li>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hje til deg før froksot
-                            mandag til lørdag. *For leveringer til postnummer 4000-7999 er leveringstiden 2 virkedager
-                            for postnummer 8000-9999 er leveringstiden 3 virkedager.</li>
-                    </ul>
-                </section>
-                <br> -->
-
                 <fieldset class="delivery-option">
                     <input type="radio" id="ekspress-utleveringssted" name="levering"
                         value="Ekspress pakke til utleveringssted">
@@ -291,17 +240,6 @@
                     </ul>
                 </fieldset>
 
-                <!--    <section class="delivery-option">
-                    <input type="radio" id="ekspress-utleveringssted" name="levering"
-                        value="Ekspress pakke til utleveringssted">
-                    <label for="ekspress-utleveringssted">Ekspress pakke til utleveringssted</label>
-                    <ul>
-                        <li>1-3 virkedager</li>
-                        <li class="delivery-icon"><span>59 kr</span><i class="fa-brands fa-dhl"></i></li>
-                    </ul>
-                </section>
-                <br> -->
-
                 <fieldset class="delivery-option">
                     <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
                     <label for="standard-hjemlevering">Standard hjemlevering</label>
@@ -311,33 +249,31 @@
                         <li>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 virkedager.</li>
                     </ul>
                 </fieldset>
-
-                <!-- <section class="delivery-option">
-                    <input type="radio" id="standard-hjemlevering" name="levering" value="Standard hjemlevering">
-                    <label for="standard-hjemlevering">Standard hjemlevering</label>
-                    <ul>
-                        <li>5-8 virkedager</li>
-                        <li class="delivery-icon"><span>Gratis</span><i class="fa-solid fa-box"></i></li>
-                        <li>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 virkedager.</li>
-                    </ul>
-                </section>
-                <br><br> -->
             </form>
         </section>
 
         <section id="payment">
             <h2 class="checkout-title">4. Betaling</h2>
-
             <form id="form-payment">
-                <h3>Betal med kort <i class="fa-solid fa-credit-card"></i></h3>
+                <fieldset>
+                    <legend>Betal med kort <i class="fa-solid fa-credit-card"></i></legend>
+                    <label for="kortnummer">Kortnummer</label>
+                    <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
+                        placeholder="****-****-****-4444">
+                    <label for="utlopsdato">Utløpsdatp</label>
+                    <input type="date" id="utlopsdato" name="utlopsdato">
+                    <label for="cvv">CVC/CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV">
+                </fieldset>
 
+                <!--      <h3>Betal med kort <i class="fa-solid fa-credit-card"></i></h3>
                 <label for="kortnummer">Kortnummer</label>
                 <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
                     placeholder="****-****-****-4444">
                 <label for="utlopsdato">Utløpsdatp</label>
                 <input type="date" id="utlopsdato" name="utlopsdato">
                 <label for="cvv">CVC/CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV">
+                <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV"> -->
             </form>
 
             <section class="checkboxes">
@@ -363,20 +299,21 @@
 
     <footer>
         <section id="footer-sec-1">
-            <a href="index.html">
+            <a href="index.html" aria-label="logo">
                 <h3>Logo</h3>
             </a>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
         </section>
 
         <section id="footer-sec-2">
+            <h3 class="not-visible">Kontakt, snarveier og sosiale medier</h3>
             <section id="contact-index">
                 <h4>KONTAKT</h4>
                 <ul>
                     <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span> B R A Veien 4, 1757 Halden
                     </li>
                     <li><i class="fa-solid fa-phone"></i><span>Telefon:</span> 69 60 80 00</li>
-                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> halden@hiof.no </li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span>mailto:halden@hiof.no </li>
                     <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00 </li>
                 </ul>
             </section>
@@ -393,10 +330,12 @@
             <section id="social-media">
                 <h4>Sosiale medier</h4>
                 <ul>
-                    <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="index.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="index.html" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="index.html" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="index.html" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
                 </ul>
             </section>
         </section>

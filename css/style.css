@@ -1109,6 +1109,12 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     flex-direction: column;
 }
 
+#form-payment fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
 #form-payment input {
     border: 1px solid var(--light-grey);
     background-color: var(--white);

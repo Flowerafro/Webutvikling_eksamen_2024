@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@
         <nav>
             <form class="search-container">
                 <label for="search-bar">søk her</label>
-                <input type="text" id="search-bar" placeholder="Søk her">
-                <i class="fas fa-search search-icon" aria-label="Søk"></i>
+                <input type="text" id="search-bar" placeholder="Søk her" aria-label="Søk">
+                <i class="fas fa-search search-icon"></i>
             </form>
             <ul class="nav-links">
                 <li><a href="index.html">Hjem</a></li>
@@ -31,12 +31,11 @@
                 <li><a href="index.html" id="logo">Logo</a></li>
                 <li><a href="index.html#pop-category">Kategorier</a></li>
                 <li><a href="index.html#contact-index">Kontakt oss</a></li>
-
             </ul>
             <ul class="nav-icons">
-                <li><i class="fa-regular fa-user" aria-label="brukerknapp"></i></li>
-                <li><i class="fa-regular fa-heart" aria-label="Favorittknapp"></i></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Handlekurvknapp"></i></a>
+                <li><i class="fa-regular fa-user"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul>
         </nav>
@@ -93,6 +92,7 @@
             <section id="product-cards">
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/200/200">
@@ -119,6 +119,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/300/300">
@@ -145,6 +146,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/300/300">
@@ -171,6 +173,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/300/300">
@@ -197,6 +200,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/300/300">
@@ -223,6 +227,7 @@
 
                 <a href="product.html">
                     <article class="product-card">
+                        <h3 class="not-visible">produktkort</h3>
                         <i class="fa-regular fa-heart product-card-icon"></i>
                         <picture>
                             <source media="(mind-width: 200px)" srcset="https://picsum.photos/300/300">
@@ -247,7 +252,6 @@
                     </article>
                 </a>
             </section>
-
         </section>
 
         <!-- Kategorikort kommer 5stk til-->
@@ -256,6 +260,7 @@
             <p> Oppdag det beste av det beste</p>
 
             <section class="categories">
+                <h3 class="not-visible">Kategorier</h3>
                 <article class="category-card card1" aria-label="Kategoribilde 1, bilde av to personer foran en eng">
                     <h4>Category 1</h4>
                 </article>
@@ -272,14 +277,13 @@
                     <h4>Category 5</h4>
                 </article>
             </section>
-
-
         </section>
 
-        <!-- Anmeldelse kommer 4stk til-->
+
         <section id="reviews">
             <h2>Anmeldelser</h2>
             <section class="review-cards side-scroll-parent">
+                <h3 class="not-visible">Anmeldelseskort</h3>
                 <article class="review-card side-scroll-child">
                     <img src="https://picsum.photos/100/100"
                         alt="Bilde av anmelder av produkter. Tilfeldig generert Picsum.">
@@ -363,20 +367,21 @@
 
     <footer>
         <section id="footer-sec-1">
-            <a href="index.html">
+            <a href="index.html" aria-label="logo">
                 <h3>Logo</h3>
             </a>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
         </section>
 
         <section id="footer-sec-2">
+            <h3 class="not-visible">Kontakt, snarveier og sosiale medier</h3>
             <section id="contact-index">
                 <h4>KONTAKT</h4>
                 <ul>
                     <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span> B R A Veien 4, 1757 Halden
                     </li>
                     <li><i class="fa-solid fa-phone"></i><span>Telefon:</span> 69 60 80 00</li>
-                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> halden@hiof.no </li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span>halden@hiof.no </li>
                     <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00 </li>
                 </ul>
             </section>
@@ -393,10 +398,12 @@
             <section id="social-media">
                 <h4>Sosiale medier</h4>
                 <ul>
-                    <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="index.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="index.html" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="index.html" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="index.html" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
                 </ul>
             </section>
         </section>
