@@ -392,6 +392,7 @@ footer h4 {
 }
 
 .product-card {
+    width: 100%;
     margin-bottom: 2rem;
     max-width: 350px;
     position: relative;
@@ -556,6 +557,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .review-cards {
     padding: 1rem 0;
 }
+
 
 .review-card {
     width: 100%;
@@ -1460,7 +1462,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0;
+        gap: 0.5rem;
     }
 
     .product-card-icon:hover {
@@ -1630,7 +1632,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
      .similar-products {
         max-width: 1200px;
         padding: 0;
-        gap: 0;
+        gap: 0.5rem;
      }
 
      .similar-arrow {

@@ -69,7 +69,8 @@
                     </select>
                     <label for="bag-quantity1">Antall
                     </label>
-                    <input type="number" min="1" max="9" id="bag-quantity1">
+                    <input type="number" min="1" max="99" id="bag-quantity1" placeholder="1">
+                    <!-- max:99  -->
 
                 </article>
                 <ul class="shoppingbag-icons">
@@ -102,7 +103,7 @@
                     </select>
                     <label for="bag-quantity2">Antall
                     </label>
-                    <input type="number" min="1" max="9" id="bag-quantity2">
+                    <input type="number" min="1" max="99" id="bag-quantity2" placeholder="1">
 
                 </article>
                 <ul class="shoppingbag-icons">
@@ -135,7 +136,7 @@
                     </select>
                     <label for="bag-quantity3">Antall
                     </label>
-                    <input type="number" min="1" max="9" id="bag-quantity3">
+                    <input type="number" min="1" max="99" id="bag-quantity3" placeholder="1">
 
                 </article>
                 <ul class="shoppingbag-icons">
@@ -168,7 +169,7 @@
                     </select>
                     <label for="bag-quantity4">Antall
                     </label>
-                    <input type="number" min="1" max="9" id="bag-quantity4">
+                    <input type="number" min="1" max="99" id="bag-quantity4" placeholder="1">
 
                 </article>
                 <ul class="shoppingbag-icons">
@@ -192,6 +193,7 @@
                     <label for="postnummer">Postnummer</label>
                     <input type="number" id="postnummer" name="postnummer" min="0001" max="9998"
                         placeholder="Postnummer*" required>
+                    <!-- i Norge går postnr. fra 0001-9998, derfor satt en min og max etter dette -->
                     <label for="poststed">Poststed</label>
                     <input type="text" id="poststed" name="poststed" placeholder="Poststed*" required>
                 </fieldset>
@@ -201,10 +203,14 @@
                 <fieldset>
                     <legend>Kontaktinformasjon</legend>
                     <label for="epost">E-post</label>
-                    <input type="email" id="epost" name="epost" placeholder="example@mail.com *" required>
+                    <input type="email" id="epost" name="epost" placeholder="example@mail.com *"
+                        pattern=".+@example\.com" minlength="3" required>
+                    <!-- pattern=".+@example\.com" skal validere at det er formatert som epost og lagt inn minimum 3 tegn.-->
 
                     <label for="telefon">Telefon</label>
-                    <input type="tel" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 " required>
+                    <input type="tel" id="telefon" name="telefon" placeholder="+47 49 ** ** 00"
+                        pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+                    <!-- pattern spesifiserer at det kun kan legges inn 8 talltegn, 2 om gangen -->
                 </fieldset>
             </form>
             <button type="submit" class="form-info-btn">Lagre</button>
@@ -256,12 +262,15 @@
                 <fieldset>
                     <legend>Betal med kort <i class="fa-solid fa-credit-card"></i></legend>
                     <label for="kortnummer">Kortnummer</label>
-                    <input type="number" id="kortnummer" name="kortnummer" min="1" max="999"
-                        placeholder="****-****-****-4444" required>
+                    <input type="text" id="kortnummer" name="kortnummer" pattern="\d{4}-\d{4}-\d{4}-\d{4}"
+                        minlength="16" placeholder="****-****-****-4444" required>
+                    <!-- Siden kortnummber består av 4x4 tall, så har jeg satt pattern til \d{4} og minimumlengde på 16 tegn. pattern fungerer ikke på type=number.-->
                     <label for="utlopsdato">Utløpsdato</label>
-                    <input type="date" id="utlopsdato" name="utlopsdato" pattern="\d{3}" required>
-                    <label for="cvv">CVC/CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV" required>
+                    <input type="date" id="utlopsdato" name="utlopsdato" required>
+
+                    <label for="ccv">CVC/CCV</label>
+                    <input type="number" id="ccv" name="ccv" placeholder="CVC/CCV" min="3" max="3" required>
+                    <!-- Siden det er bare 3 siffer på CCV/CVC-kode har jeg satt både min og max på 3 -->
                 </fieldset>
             </form>
 
@@ -269,23 +278,27 @@
                 <h3>Å betale inkl. mva</h3>
                 <p id="price">1 199 kr</p>
                 <button type="submit" class="form-info-btn">Fullfør kjøp</button>
+                <!-- type="submit" for å indikere at knappen sender inn et skjema (submit form-data)-->
                 <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og
                     fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet
                     dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                <!-- I følge demo-videoen ser det ut som at det ikke er noen checkbox på vilkår som er oppført i minstekrav. Lagt inn under. Forklaring i eksamensdokument.-->
 
                 <form>
                     <fieldset>
+                        <legend class="not-visible">Jeg godtar vilkår</legend>
+                        <input type="checkbox" id="vilkår" name="vilkår" value="vilkår">
+                        <label for="vilkår">Ja, jeg godtar vilkårene</label>
+                    </fieldset>
+                    <fieldset>
                         <legend class="not-visible">Motta nyhetsbrev</legend>
-                        <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev"
-                            value="Ja takk! Send nyhetsbrev til meg.">
+                        <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev" value="Nyhetsbrev">
                         <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
-
                     </fieldset>
 
                     <fieldset>
                         <legend class="not-visible">Motta tekstmeldinger</legend>
-                        <input type="checkbox" id="tilbud" name="tilbud"
-                            value="Jeg ønsker å motta tekstmeldinger med tilbud og nyheter">
+                        <input type="checkbox" id="tilbud" name="tilbud" value="Tekstmeldinger">
                         <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label>
                     </fieldset>
                 </form>
