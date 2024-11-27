@@ -178,7 +178,7 @@ footer #footer-sec-2 h4 {
 }
 
 #shortcuts {
-    width: 30%;
+    width: 35%;
 }
 
 #contact-index ul,
@@ -207,7 +207,7 @@ footer #footer-sec-2 h4 {
 
 /* Kontakt */
 #contact-index {
-    width: 70%;
+    width: 60%;
 }
 
 #contact-index li span {
@@ -1584,8 +1584,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     flex-direction: column;
     justify-content: center;
     padding: 0;
-
-    /*overflow-y fungerer ikke helt som jeg vil*/
 }
 
 .details-section {
