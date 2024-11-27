@@ -14,7 +14,7 @@
     <title>Nettbutikk - kasseside</title>
 </head>
 
-<body class="grid-container">
+<body>
     <header>
         <nav>
             <form class="search-container">
@@ -277,29 +277,23 @@
             <section class="checkboxes">
                 <h3>Å betale inkl. mva</h3>
                 <p id="price">1 199 kr</p>
-                <button type="submit" class="form-info-btn">Fullfør kjøp</button>
-                <!-- type="submit" for å indikere at knappen sender inn et skjema (submit form-data)-->
+                <button type="button" class="form-info-btn">Fullfør kjøp</button>
+                <!-- type="button" for å indikere at knappen kan klikkes og ikke er koblet til innsending av data i form-->
                 <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og
                     fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet
                     dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-                <!-- I følge demo-videoen ser det ut som at det ikke er noen checkbox på vilkår som er oppført i minstekrav. Lagt inn under. Forklaring i eksamensdokument.-->
+                <!-- I følge demo-videoen ser det ut som at det er feil tekst på checkbox. Forklaring i eksamensdokument.-->
 
                 <form>
                     <fieldset>
                         <legend class="not-visible">Jeg godtar vilkår</legend>
                         <input type="checkbox" id="vilkår" name="vilkår" value="vilkår">
-                        <label for="vilkår">Ja, jeg godtar vilkårene</label>
+                        <label for="vilkår">Ja, jeg godtar vilkårene.</label>
                     </fieldset>
                     <fieldset>
                         <legend class="not-visible">Motta nyhetsbrev</legend>
                         <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev" value="Nyhetsbrev">
                         <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="not-visible">Motta tekstmeldinger</legend>
-                        <input type="checkbox" id="tilbud" name="tilbud" value="Tekstmeldinger">
-                        <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label>
                     </fieldset>
                 </form>
             </section>
