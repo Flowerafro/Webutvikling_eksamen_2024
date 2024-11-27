@@ -1371,13 +1371,14 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
     #banner {
         min-height: 500px;
-        position: relative;
+       /*  position: relative; */
     }
     
      .banner-image {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
      }
      .banner-img2 {
         background-image: url('/bilder/banner2.jpg');
