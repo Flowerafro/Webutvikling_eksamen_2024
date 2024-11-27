@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+:required {
+    background-color: yellow;
+}
+
 body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     max-width: 1200px;
@@ -134,99 +138,103 @@ nav .nav-icons li {
 
 footer {
     border-top: 1px solid var(--black);
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
     width: 100%;
+
+    margin 1rem 0;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: repeat(3, 1fr);
 }
 
-footer #footer-sec-1 {
-   margin-top: 1rem;
+footer section {
+    padding: 1rem 0;
 }
 
-footer #footer-sec-1 a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: var(--black);
-}
-
-footer #footer-sec-1 a h3 {
-    margin-top: 2rem 0;
-    margin-bottom: 1rem;
-}
-
-footer #footer-sec-2 {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-footer #footer-sec-2 h4 {
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 1rem 0;
-}
-
-/************* Kontakt, Snarveier & Sosiale medier *********************/
-
-#contact-index,
-#shortcuts,
-#social-media {
-    margin-top: 1rem;
-}
-
-#shortcuts {
-    width: 40%;
-}
-
-#contact-index ul,
-#shortcuts ul,
-#social-media ul {
+footer ul {
     list-style: none;
-    margin-top: 1rem;
 }
 
-#contact-index ul li i,
-#social-media ul li a i {
-    margin: 0.5rem;
-    color: var(--black);
-    font-size: 0.9rem;
-}
-#contact-index ul li,
-#shortcuts ul li {
+footer ul li {
     font-size: 0.8rem;
+    margin-bottom: 0.2rem;
 }
 
-#shortcuts ul li a,
-#social-media ul li a {
+footer ul li i {
+    margin-right: 0.5rem;
+}
+
+footer ul li span {
+    font-weight: 600;
+}
+
+footer h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/**** footer logo *****/
+.footer-logo {
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+.footer-logo a {
     text-decoration: none;
     color: var(--black);
 }
 
-/* Kontakt */
-#contact-index {
-    width: 60%;
+/**** footer kontakt *****/
+.footer-contact {
+    grid-column: 1;
+    grid-row: 2;
 }
 
-#contact-index li span {
-    font-weight: 600;   
+/**** footer snarveier *****/
+.footer-shortcuts {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-/* Snarveier */
-#shortcuts ul {
+.footer-shortcuts ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-/* Sosiale medier */
-#social-media ul {
+.footer-shortcuts ul li {
+    word-wrap: break-all;
+    overflow-wrap: break-all;
+}
+
+.footer-shortcuts a {
+    color: var(--black);
+}
+
+/**** footer sosiale medier *****/
+.footer-social {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.footer-social ul {
     display: flex;
     flex-direction: row;
-    gap: 0.2rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.footer-social ul li i {
+    font-size: 1rem;
+    padding: 0.1rem;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 /*********************************************************************************/
@@ -643,13 +651,13 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     display: grid;
     grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 100%;
-    /* max-width: 500px; */
+    width: 100vw;
+    /* max-width: 400px; */
     height: auto;
 }
 
 .product-image {
-    padding: 0.5rem;
+    padding: 0.1rem;
 }
 
 .product-image img {
@@ -1159,28 +1167,19 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     /* Footer*/
 
     footer {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
     }
 
-    footer #footer-sec-2 {
-        flex-wrap: nowrap;
-        gap: 0;
+    footer h4 {
+        font-size: 1rem;
     }
 
-    #contact-index {
-        width: 50%;
+    footer ul li {
+        font-size: 0.9rem;
     }
 
-    #contact-index ul li,
-    #shortcuts ul li {
-    font-size: 1rem;
-    }
-
-    #footer-sec-2 h4 {
-        font-size: 1.2rem;
+    footer ul li span {
+        margin-right: 0.5rem;
     }
 
     /******************** Forside *************************/
@@ -1334,36 +1333,30 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     /********** GLOBAL footer ***************/
 
     footer {
-        padding: 0;
+        grid-template-columns: 50% 1fr 15%;
+        grid-template-rows: 1fr 1fr;
+
         margin-bottom: 2rem;
     }
 
-    #footer-sec-1 h3 {
-        margin-top: 2rem;
+    .footer-logo {
+        grid-column: span 3;
+        grid-row: 1;
     }
 
-    #contact-index,
-    #shortcuts,
-    #social-media {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
+    .footer-contact {
+        grid-column: 1;
+        grid-row: 2;
     }
 
-    #contact-index ul,
-    #shortcuts ul,
-    #social-media ul {
-        list-style: none;
-        margin-top: 0;
+    .footer-shortcuts {
+        grid-column: 2;
+        grid-row: 2;
     }
 
-    #social-media ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 0;
-        gap: 0;
+    .footer-social {
+        grid-column: 3;
+        grid-row: 2;
     }
 
     /************************************** Forside ***************************************/
@@ -1449,7 +1442,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
     #pop-products,
     #pop-category {
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 
     #pop-products h2,

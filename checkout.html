@@ -19,7 +19,7 @@
         <nav>
             <form class="search-container">
                 <label for="search-bar">søk her</label>
-                <input type="text" id="search-bar" placeholder="Søk her" aria-label="Søk">
+                <input type="search" id="search-bar" placeholder="Søk her" aria-label="Søk">
                 <i class="fas fa-search search-icon"></i>
             </form>
             <ul class="nav-links">
@@ -27,7 +27,7 @@
                 <li><a href="index.html#pop-products">Produkter</a></li>
                 <li><a href="index.html" id="logo">Logo</a></li>
                 <li><a href="index.html#pop-category">Kategorier</a></li>
-                <li><a href="#contact-index">Kontakt oss</a></li>
+                <li><a href="#contact">Kontakt oss</a></li>
             </ul>
             <ul class="nav-icons">
                 <li><i class="fa-regular fa-user"></i></li>
@@ -56,7 +56,7 @@
                     <h3>Product name</h3>
                     <ul>
                         <li>Kr 1999</li>
-                        <li>Farge: Beige</li>
+                        <li>Farge: Hvit med blå blomster</li>
                     </ul>
                     <label for="bag-size1">Størrelse
                     </label>
@@ -89,7 +89,7 @@
                     <h3>Product name</h3>
                     <ul>
                         <li>Kr 1999</li>
-                        <li>Farge: Beige</li>
+                        <li>Farge: Hvit med blå blomster</li>
                     </ul>
                     <label for="bag-size2">Størrelse
                     </label>
@@ -122,7 +122,7 @@
                     <h3>Product name</h3>
                     <ul>
                         <li>Kr 1999</li>
-                        <li>Farge: Beige</li>
+                        <li>Farge: Hvit med blå blomster</li>
                     </ul>
                     <label for="bag-size3">Størrelse
                     </label>
@@ -155,7 +155,7 @@
                     <h3>Product name</h3>
                     <ul>
                         <li>Kr 1999</li>
-                        <li>Farge: Beige</li>
+                        <li>Farge: Hvit med blå blomster</li>
                     </ul>
                     <label for="bag-size4">Størrelse
                     </label>
@@ -184,16 +184,16 @@
                 <fieldset>
                     <legend>Leveringsadresse</legend>
                     <label for="fname">Fornavn</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Fornavn*">
+                    <input type="text" id="fname" name="fornavn" placeholder="Fornavn*" required>
                     <label for="lname">Etternavn</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Etternavn*">
+                    <input type="text" id="lname" name="etternavn" placeholder="Etternavn*" required>
                     <label for="gateadresse">Gateadresse</label>
-                    <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*">
+                    <input type="text" id="gateadresse" name="gateadresse" placeholder="Gateadresse*" required>
                     <label for="postnummer">Postnummer</label>
                     <input type="number" id="postnummer" name="postnummer" min="0001" max="9998"
                         placeholder="Postnummer*" required>
                     <label for="poststed">Poststed</label>
-                    <input type="text" id="poststed" name="poststed" placeholder="Poststed*">
+                    <input type="text" id="poststed" name="poststed" placeholder="Poststed*" required>
                 </fieldset>
             </form>
 
@@ -201,10 +201,10 @@
                 <fieldset>
                     <legend>Kontaktinformasjon</legend>
                     <label for="epost">E-post</label>
-                    <input type="text" id="epost" name="epost" placeholder="example@mail.com *">
+                    <input type="email" id="epost" name="epost" placeholder="example@mail.com *" required>
 
                     <label for="telefon">Telefon</label>
-                    <input type="text" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 ">
+                    <input type="tel" id="telefon" name="telefon" placeholder="+47 49 ** ** 00 " required>
                 </fieldset>
             </form>
             <button type="submit" class="form-info-btn">Lagre</button>
@@ -216,7 +216,7 @@
             <form id="form-delivery">
                 <h3>Leveringsvalg</h3>
                 <fieldset class="delivery-option">
-                    <!-- <legend>Leveringsvalg</legend> -->
+                    <legend class="not-visible">Leveringsvalg</legend>
                     <input type="radio" id="ekspress-hjem" name="levering" value="Ekspress hjemlevering">
                     <label for="ekspress-hjem">Ekspress hjemlevering</label>
                     <ul>
@@ -256,12 +256,12 @@
                 <fieldset>
                     <legend>Betal med kort <i class="fa-solid fa-credit-card"></i></legend>
                     <label for="kortnummer">Kortnummer</label>
-                    <input type="number" id="kortnummer" name="kortnummer" min="1" max="9"
-                        placeholder="****-****-****-4444">
-                    <label for="utlopsdato">Utløpsdatp</label>
-                    <input type="date" id="utlopsdato" name="utlopsdato">
+                    <input type="number" id="kortnummer" name="kortnummer" min="1" max="999"
+                        placeholder="****-****-****-4444" required>
+                    <label for="utlopsdato">Utløpsdato</label>
+                    <input type="date" id="utlopsdato" name="utlopsdato" pattern="\d{3}" required>
                     <label for="cvv">CVC/CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV">
+                    <input type="text" id="cvv" name="cvv" placeholder="CVC/CVV" required>
                 </fieldset>
             </form>
 
@@ -273,69 +273,71 @@
                     fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet
                     dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
 
+                <form>
+                    <fieldset>
+                        <legend class="not-visible">Motta nyhetsbrev</legend>
+                        <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev"
+                            value="Ja takk! Send nyhetsbrev til meg.">
+                        <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
 
-                <fieldset>
-                    <legend class="not-visible">Motta nyhetsbrev</legend>
-                    <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev" value="Ja takk! Send nyhetsbrev til meg.">
-                    <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
+                    </fieldset>
 
-                </fieldset>
-
-                <fieldset>
-                    <legend class="not-visible">Motta tekstmeldinger</legend>
-                    <input type="checkbox" id="tilbud" name="tilbud"
-                        value="Jeg ønsker å motta tekstmeldinger med tilbud og nyheter">
-                    <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label>
-                </fieldset>
+                    <fieldset>
+                        <legend class="not-visible">Motta tekstmeldinger</legend>
+                        <input type="checkbox" id="tilbud" name="tilbud"
+                            value="Jeg ønsker å motta tekstmeldinger med tilbud og nyheter">
+                        <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</label>
+                    </fieldset>
+                </form>
             </section>
         </section>
     </main>
 
     <footer>
-        <section id="footer-sec-1">
+        <section class="footer-logo">
             <a href="index.html" aria-label="logo">
                 <h3>Logo</h3>
             </a>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores?</p>
         </section>
-        <section id="footer-sec-2">
-            <h3 class="not-visible">Kontakt, snarveier og sosiale medier</h3>
-            <section id="contact-index">
-                <h4>KONTAKT</h4>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span> B R A Veien 4, 1757 Halden
-                    </li>
-                    <li><i class="fa-solid fa-phone"></i><span>Telefon:</span> 69 60 80 00</li>
-                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> halden@hiof.no </li>
-                    <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00 </li>
-                </ul>
-            </section>
-            <section id="shortcuts">
-                <h4>Snarveier</h4>
-                <ul>
-                    <li><a href="product.html">Produkter</a></li>
-                    <li><a href="index.html#pop-category">Kategorier</a></li>
-                    <li><a href="index.html#contact-index">Kontakt oss</a></li>
-                    <li><a href="WCAG-sjekkliste.pdf">Tilgjengelighetserklæring</a></li>
-                </ul>
-            </section>
-            <section id="social-media">
-                <h4>Sosiale medier</h4>
-                <ul>
-                    <li><a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                    </li>
-                    <li><a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i
-                                class="fab fa-facebook"></i></a>
-                    </li>
-                    <li><a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
-                    </li>
-                    <li><a href="https://www.pinterest.com" aria-label="Pinterest" target="_blank"><i
-                                class="fab fa-pinterest"></i></a>
-                    </li>
-                </ul>
-            </section>
+
+        <section class="footer-contact" id="contact">
+            <h4>KONTAKT</h4>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span> B R A Veien 4, 1757 Halden
+                </li>
+                <li><i class="fa-solid fa-phone"></i><span>Telefon:</span> 69 60 80 00</li>
+                <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> halden@hiof.no </li>
+                <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00 </li>
+            </ul>
+        </section>
+
+        <section class="footer-shortcuts">
+            <h4>Snarveier</h4>
+            <ul>
+                <li><a href="product.html">Produkter</a></li>
+                <li><a href="index.html#pop-category">Kategorier</a></li>
+                <li><a href="#contact">Kontakt oss</a></li>
+                <li><a href="WCAG-sjekkliste.pdf">Tilgjengelighetserklæring</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-social">
+            <h4>Sosiale medier</h4>
+            <ul>
+                <li><a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://www.pinterest.com" aria-label="Pinterest" target="_blank"><i
+                            class="fab fa-pinterest"></i></a>
+                </li>
+            </ul>
         </section>
     </footer>
 </body>
