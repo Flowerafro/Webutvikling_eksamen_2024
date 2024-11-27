@@ -31,7 +31,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* buttons */
 
 .white-btn {
@@ -135,7 +134,8 @@ nav .nav-icons li {
 
 footer {
     border-top: 1px solid var(--black);
-    margin: 1rem 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem 0;
     width: 100%;
 }
@@ -178,7 +178,7 @@ footer #footer-sec-2 h4 {
 }
 
 #shortcuts {
-    width: 35%;
+    width: 40%;
 }
 
 #contact-index ul,
@@ -215,8 +215,11 @@ footer #footer-sec-2 h4 {
 }
 
 /* Snarveier */
-#shortcuts li {
-    margin-top: 1rem;
+#shortcuts ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Sosiale medier */
@@ -227,7 +230,7 @@ footer #footer-sec-2 h4 {
 }
 
 /*********************************************************************************/
-/*************************** FORSIDE index.html***********************************/
+/*************************** FORSIDE index.html **********************************/
 /*********************************************************************************/
 
 /*** Banner ***/
@@ -580,7 +583,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     margin-top: 0.5rem;
 }
 
-/* Side scroll */
+/**************************** Side scroll *******************/
 
 .side-scroll-parent {
     display: flex;
@@ -593,9 +596,9 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     flex: 0 0 auto;
 }
 
-/*********************************************************************************/
+/*************************************************************************************/
 /*************************** Produktside product.html*********************************/
-/*********************************************************************************/
+/*************************************************************************************/
 
 #product-section, 
 #similar-product, 
@@ -605,7 +608,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 
 
-/* brødsmulesti*/
+/*********************** brødsmulesti ***********************/
 #product-section h1 {
     visibility: hidden;
 }
@@ -629,7 +632,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     font-weight: bold;
 }
 
-/******************* Produkt ********************/
+/************************* Produkt ************************/
 
 .products {
     display: flex;
@@ -864,11 +867,10 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
-
-    width: 95vw;
+    width: 95vw; 
 }
 
-/* Horisontal scroll for similar products*/
+/* Horisontal scroll for similar products */
 .similar-scroll-child {
     flex: 0 0 auto;
     max-width: 300px;
@@ -900,9 +902,9 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 
 #checkout h3 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 #shopping-bag, 
@@ -1213,7 +1215,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     .review-card p {
-        margin
+        margin: 0;
     }
 
      /******************** Produktside product *************************/
@@ -1427,6 +1429,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         padding: 1.5rem;
         top: 50%;
         transform: translateY(-50%);
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1507,7 +1510,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
    }
 
    .category-card {
-    margin: 0;
+        margin: 0;
     }
 
     .card1 {
@@ -1579,7 +1582,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .product-info-section {
     width: 30%;
     height: auto;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1599,7 +1601,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     cursor: pointer;
 }
 
-
 .product-info {
     padding:0;
 }
@@ -1618,7 +1619,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     transition: 0.5s ease-in-out;
 }
 
-   
 /****************** lignende produkter ********************/
 
      #similar-product h2 {
@@ -1672,7 +1672,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         margin: 0.5rem 0;
         width: 100%;
         border: 1px solid var(--light-grey);
-        }
+    }
 
         #checkout h2 {
             font-size: 1.5rem;
@@ -1740,7 +1740,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
         width: 60%;
     }
 
