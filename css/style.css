@@ -1149,7 +1149,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .delivery-option ul li:first-child {
     font-weight: 600;
-    color: var(--grey);
+    color: var(--dark-grey);
 }
 
 .delivery-option ul li span {
@@ -1706,11 +1706,14 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .black-btn:hover {
     background-color: var(--light-grey);
-    transition: 0.5s ease-in-out;
+    color: var(--black);
+    font-weight: 600;
 }
 
 .white-btn:hover {
-    color: var(--peach);
+    color: var(--white);
+    background-color: var(--peach);
+    border: 1px solid var(--peach);
     transition: 0.5s ease-in-out;
 }
 
@@ -1855,6 +1858,16 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         
         .form-info-btn {
             width: 60%;
+        }
+
+        .form-info-btn:hover {
+            background-color: var(--light-grey);
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .form-info-btn:focus {
+            border: 2px solid var(--dark-grey);
         }
 
         #form-info-abort {
