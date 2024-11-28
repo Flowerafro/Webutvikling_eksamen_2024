@@ -80,6 +80,10 @@ header {
     outline: none;
 }
 
+#search-bar:focus {
+    border: 2px solid var(--dark-grey);
+}
+
 .search-icon {
     position: absolute;
     top: 50%;
@@ -121,7 +125,7 @@ nav .nav-icons {
     flex-direction: row;
     padding: 0; 
     margin: 0;
-    curosr: pointer;
+    cursor: pointer;
 }
 
 nav .nav-icons li {
@@ -137,7 +141,7 @@ footer {
     border-top: 1px solid var(--black);
     width: 100%;
 
-    margin 1rem 0;
+    margin: 1rem 0;
     padding: 0.5rem;
 
     display: grid;
