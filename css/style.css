@@ -25,13 +25,6 @@ body {
     max-width: 1200px;
 }
 
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    margin: 0 auto;
-} */
-
 /* buttons */
 
 .white-btn {
@@ -205,7 +198,6 @@ footer h4 {
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 
 .footer-shortcuts a {
     color: var(--black);
@@ -417,14 +409,6 @@ footer h4 {
     border-radius: 20px;
 }
 
-/* .product-card picture,
-.product-card img {
-    width: 100%;
-    min-width: 250px;
-    border-radius: 20px;
-    height: auto;
-}
- */
 .product-card-info {
     display: flex;
     flex-direction: column;
@@ -560,7 +544,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 /******************************* Anmeldelser ************************/
 
 #reviews {
-    /* max-width: 400px;  */
     padding: 1rem;
     width: 95vw; /*95vw gir horisontal scrollen en responsiv størrelse*/
 }
@@ -568,7 +551,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .review-cards {
     padding: 1rem 0;
 }
-
 
 .review-card {
     width: 100%;
@@ -1005,7 +987,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
 .shoppingbag-item {
     width: 100%;
-   /*  height: calc(200px * 2, auto); */
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -1234,7 +1215,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         margin: 1rem 0;
     }
     /* Footer*/
-
     footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -1252,10 +1232,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     /******************** Forside *************************/
-/*     .banner-image {
-        min-height: 400px;
-    } */
-
     .pop-btns {
         margin: 1rem 0;
     }
@@ -1265,19 +1241,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         gap: 1rem;
         padding: 1rem;
     }
-
-  /*   .product-card {
-        max-width: 350px;
-    } */
-
-    /* .product-card picture,
-    .product-card img {
-        width: 100%;
-        max-width: 600px;
-        border-radius: 20px;
-        height: auto;
-    }
- */
     .categories {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -1295,11 +1258,6 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         grid-column: 2;
         grid-row: span 2;
     }
-
-   /*  #reviews {
-        max-width: 800px;
-    } */
-
     .review-card p {
         margin: 0;
     }
@@ -1465,7 +1423,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
     #banner {
         min-height: 500px;
-       /*  position: relative; */
+       /*  position: relative;  av en eller annen grunn så vil ikke knappene festes på parent men på sibling*/
     }
     
      .banner-image {
@@ -1474,6 +1432,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         justify-content: center;
         align-items: center;
         position: relative;
+        padding: 0;
      }
      .banner-img2 {
         background-image: url('/bilder/banner2.jpg');
@@ -1514,16 +1473,17 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     .banner-slider-btns {
-        width: 100%;
-        max-width: 1200px;
+        width: 98%;
+        max-width: 1184px;
+        top: 45%;
+        /*width, max-width, top gir en sentrering av knapper midt på bannerbildet*/
+        
         position: absolute;
-        top: 50%;
-
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0.5rem;
+        
         z-index: 100;
     }
     .banner-slider-btn {
