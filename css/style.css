@@ -242,6 +242,7 @@ footer h4 {
 
 #banner {
     margin: 0 auto;
+    padding: 0.5rem;
 } 
 
 .banner-image {
@@ -307,12 +308,11 @@ footer h4 {
 }
 
 .banner-btn {
-    width: fit-content;
     border: none;
     border-radius: 20px; 
-    padding: 0.5rem; 
+    text-align: center;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
     font-size: 0.8rem;
     cursor: pointer;
 }
@@ -330,11 +330,11 @@ footer h4 {
 
 #pop-products,
 #pop-category {
-   /*  margin: 0 auto;
+   margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center; 
 }
 
 #pop-products h1,
@@ -476,10 +476,9 @@ footer h4 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
     gap: 1rem;
+    padding: 1rem;
     width: 100%;
     margin: 0 auto;
-
-    border: blue 1px solid;
 }
 
 .category-card {
@@ -561,8 +560,9 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 /******************************* Anmeldelser ************************/
 
 #reviews {
-    max-width: 400px; 
+    /* max-width: 400px;  */
     padding: 1rem;
+    width: 95vw; /*95vw gir horisontal scrollen en responsiv størrelse*/
 }
 
 .review-cards {
@@ -1002,9 +1002,10 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 }
 /*********** 1. Shopping bagen din **************/
 
+
 .shoppingbag-item {
     width: 100%;
-    height: calc(200px * 2, auto);
+   /*  height: calc(200px * 2, auto); */
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -1014,6 +1015,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 .shoppingbag-item img {
     max-width: 160px;
     height: auto;
+    /* width: 100%; fra minstekravet */
 }
 
 .shoppingbag-info {
@@ -1261,6 +1263,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     #product-cards {
         flex-direction: row;
         gap: 1rem;
+        padding: 1rem;
     }
 
   /*   .product-card {
@@ -1280,18 +1283,22 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         grid-template-rows: repeat(3, 1fr);
         padding: 1rem;
     }
-
-    .category-card {
+    .grid1 {
+        grid-column: 1;
+        grid-row: 1;
     }
-    
-    .card3 {
-        grid-column: span 2;
+    .card2 {
+        grid-column: 1;
         grid-row: 2;
     }
-
-    #reviews {
-        max-width: 800px;
+    .card3 {
+        grid-column: 2;
+        grid-row: span 2;
     }
+
+   /*  #reviews {
+        max-width: 800px;
+    } */
 
     .review-card p {
         margin: 0;
@@ -1335,6 +1342,15 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     /******************** Kasseside checkout *************************/
+
+    #shopping-bag, 
+    #information,
+    #delivery,
+    #payment {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+    }
 
     .shoppingbag-item {
         flex-direction: row;
@@ -1449,13 +1465,14 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
 
     #banner {
         min-height: 500px;
-        /* position: relative; */
+       /*  position: relative; */
     }
     
      .banner-image {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         position: relative;
      }
      .banner-img2 {
@@ -1471,9 +1488,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     /*Image by <a href="https://pixabay.com/users/lobostudiohamburg-13838/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Thomas Ulrich</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1629079">Pixabay</a>*/
     
     .banner-btn {
-        font-weight: 600;
-        padding: 0.8rem;
-        text-transform: uppercase;
+        margin: 1rem;
     }
 
     .banner-btn-dark {
@@ -1488,31 +1503,27 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     .banner-title {
         font-size: 2rem;
         width: 40%;
-        padding: 0 1rem;
     }
 
     .text-right {
         margin-right: 2rem;
-        padding-right: 1rem;
     }
 
     .text-left {
         margin-left: 2rem;
-        padding-left: 1rem;
     }
 
     .banner-slider-btns {
         width: 100%;
         max-width: 1200px;
         position: absolute;
-        padding: 1.5rem;
         top: 50%;
-        transform: translateY(-50%);
 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 0 0.5rem;
         z-index: 100;
     }
     .banner-slider-btn {
@@ -1524,6 +1535,10 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
     }
 
     /************************ produktkort *******************/
+
+    #pop-products h1 {
+        font-size: 1.8rem;
+    }
 
     #pop-products,
     #pop-category {
@@ -1826,6 +1841,7 @@ https://pixabay.com/photos/background-bigroot-geranium-bright-8653526/
         flex-wrap: wrap;
         width: 60%;
     }
+
 
     .form-information label {
         margin: 0.5rem 0;
